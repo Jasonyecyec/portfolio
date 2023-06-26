@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: "#1a1a1a",
-        darkPrimary: "#333333",
-        darkSecondary: "#4d4d4d",
+        dark: "#1D2C33",
+        darkPrimary: "#00D1C7",
+        darkSecondary: "#999999",
         white: "#ffffff",
-        whitePrimay: "#f2f2f2",
-        whiteSecondary: "#f5f5f5",
+        whitePrimay: "#646AFF",
+        whiteSecondary: "#818384",
       },
       screens: {
         xs: "360px",
