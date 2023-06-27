@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "@/App.css";
 import { MainInfo } from "@/components";
 import { useToggleMode } from "@/store.js";
+import About from "@/components/sections/About";
 
 function App() {
   const { isActive } = useToggleMode();
@@ -15,6 +16,7 @@ function App() {
       } ease-in-out	duration-300`}
     >
       <MainInfo />
+      <About />
     </main>
   );
 }
