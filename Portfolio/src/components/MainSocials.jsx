@@ -16,7 +16,11 @@ const MainSocials = () => {
                   isActive ? "bg-[#1B3B41]" : "bg-[#BBBEFF]"
                 } w-12 h-12 flex justify-center items-center shadow-lg`}
               >
-                <Icon className="text-2xl" />
+                <Icon
+                  className={`${
+                    isActive ? "text-white" : "text-black"
+                  } text-2xl`}
+                />
               </button>
             </a>
           </li>
