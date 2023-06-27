@@ -5,7 +5,7 @@ import {
   textColorSecondaryFunction,
 } from "@/utils/utils";
 
-import AboutImg from "@/assets/about_pic.jpg";
+import AboutImg from "@/assets/about.jpg";
 
 const About = () => {
   const { isActive } = useToggleMode();
@@ -62,7 +62,11 @@ const About = () => {
               isActive ? "before:bg-darkPrimary" : "before:bg-whitePrimay"
             }`}
           ></span>
-          <img src={AboutImg} alt="" className="object-bottom " />
+          <img
+            src={AboutImg}
+            alt=""
+            className="object-bottom grayscale	hover:grayscale-0 ease-in-out duration-300"
+          />
         </div>
       </div>
     </section>
