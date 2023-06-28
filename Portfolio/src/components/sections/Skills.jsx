@@ -17,7 +17,8 @@ const Skills = () => {
           isActive
         )} text-3xl font-bold font-montserrat`}
       >
-        Skills <span className="mt-auto">&</span> Technologies
+        Skills <span className="text-[#A1A3A4]">&</span>{" "}
+        <span className="block">Technologies</span>
       </h2>
 
       <div className="flex items-center justify-center flex-wrap gap-5  mt-10 ">
