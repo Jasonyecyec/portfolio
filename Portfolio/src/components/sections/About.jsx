@@ -11,7 +11,7 @@ const About = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-44 mb-44">
+    <section className="mt-44 ">
       <h2
         className={`${textColorPrimaryFunction(
           isActive
@@ -28,9 +28,7 @@ const About = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          aliquip ex ea commodo consequat.
         </p>
 
         <p>
@@ -44,9 +42,7 @@ const About = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          aliquip ex ea commodo consequat.
         </p>
       </div>
 
@@ -65,7 +61,7 @@ const About = () => {
           <img
             src={AboutImg}
             alt=""
-            className="object-bottom grayscale	hover:grayscale-0 ease-in-out duration-300"
+            className="object-bottom grayscale w-full	hover:grayscale-0 ease-in-out duration-300"
           />
         </div>
       </div>

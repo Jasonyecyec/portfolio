@@ -1,6 +1,18 @@
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsFacebook } from "react-icons/bs";
+import { IoLogoJavascript } from "react-icons/io5";
+import { BiLogoJava } from "react-icons/bi";
+import { FaReact } from "react-icons/fa";
+import { SiSpringboot, SiSpring } from "react-icons/si";
+import { BiLogoTailwindCss } from "react-icons/bi";
+import { SiPhp } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { BsFillBootstrapFill } from "react-icons/bs";
+import { BsGit } from "react-icons/bs";
+import { AiFillApi } from "react-icons/ai";
+import { BiLogoFigma } from "react-icons/bi";
+import { SiCsharp } from "react-icons/si";
 
 export const socials = [
   {
@@ -41,6 +53,65 @@ export const navigation = [
   },
 ];
 
-export const technologies = {
-  icon: "",
-};
+export const technologies = [
+  {
+    Icon: IoLogoJavascript,
+    name: "Javascript",
+  },
+  {
+    Icon: BiLogoJava,
+    name: "Java",
+  },
+  {
+    Icon: FaReact,
+    name: "React.js",
+  },
+  {
+    Icon: SiSpringboot,
+    name: "Spring Boot",
+  },
+  {
+    Icon: SiSpring,
+    name: "Spring",
+  },
+  {
+    Icon: BiLogoTailwindCss,
+    name: "Tailwind CSS",
+  },
+  {
+    Icon: SiPhp,
+    name: "PHP",
+  },
+  {
+    Icon: SiMysql,
+    name: "MySQL",
+  },
+  {
+    Icon: BsFillBootstrapFill,
+    name: "Bootstrap",
+  },
+  {
+    Icon: BsGit,
+    name: "Git",
+  },
+  {
+    Icon: AiFillGithub,
+    name: "Github",
+  },
+  {
+    Icon: AiFillApi,
+    name: "REST API",
+  },
+  {
+    Icon: BiLogoFigma,
+    name: "Figma",
+  },
+  {
+    Icon: BiLogoFigma,
+    name: "Figma",
+  },
+  {
+    Icon: SiCsharp,
+    name: "C#",
+  },
+];
