@@ -7,7 +7,7 @@ const Navigation = () => {
   const { toggleActive, isActive } = useToggleMode();
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between ">
       <div>
         <p
           className={`${

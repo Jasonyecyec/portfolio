@@ -81,7 +81,11 @@ const MainInfo = () => {
       <Navigation />
 
       <div className="mt-20 space-y-5">
-        <p className={`${textColorSecondaryFunction(isActive)}`}>
+        <p
+          className={`${textColorSecondaryFunction(
+            isActive
+          )} text-xl font-semibold`}
+        >
           Hi there, I'm
         </p>
         <h1
@@ -91,16 +95,14 @@ const MainInfo = () => {
         >
           Jason Yecyec
         </h1>
-        <p className={`${textColorSecondaryFunction(isActive)}`}>
+        <p className={`${textColorSecondaryFunction(isActive)} text-xl`}>
           An aspiring <span className="font-bold"> Software Engineer</span>
         </p>
         <p className={`${textColorSecondaryFunction(isActive)} mb-36`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          aliquip ex ea commodo consequat.
         </p>
       </div>
 
