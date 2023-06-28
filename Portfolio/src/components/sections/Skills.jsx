@@ -11,7 +11,7 @@ const Skills = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-24 mb-20 ease-in-out ">
+    <section className="mt-24 mb-24 ease-in-out ">
       <h2
         className={`${textColorPrimaryFunction(
           isActive
@@ -23,11 +23,11 @@ const Skills = () => {
 
       <div className="flex items-center justify-center flex-wrap gap-5  mt-10 ">
         {technologies.map(({ Icon, name }) => (
-          <div className="group rounded border-2 border-[#A1A3A4] p-3 hover:border-darkPrimary duration-300">
+          <div className="group rounded border-2 border-[#A1A3A4] p-2 hover:border-darkPrimary duration-300">
             <p
               className={`${textColorSecondaryFunction(
                 isActive
-              )} flex  flex-col items-center justify-center`}
+              )} flex  flex-col items-center justify-center text-base`}
             >
               <Icon
                 className={`text-white text-2xl group-hover:text-darkPrimary`}
