@@ -80,7 +80,7 @@ const MainInfo = () => {
     <section>
       <Navigation />
 
-      <div className="mt-20 space-y-5">
+      <div className="mt-20 space-y-4">
         <p
           className={`${textColorSecondaryFunction(
             isActive
@@ -108,7 +108,9 @@ const MainInfo = () => {
 
       <div className="flex mt-10 space-x-7">
         <CTAButton isActive={isActive}>
-          <span className={` font-montserrat font-semibold`}>About me</span>
+          <span className={` font-montserrat font-semibold`}>
+            <a href="#about">About me</a>
+          </span>
         </CTAButton>
 
         <CTAButton isActive={isActive}>

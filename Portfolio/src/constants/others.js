@@ -30,6 +30,10 @@ import Github from "@/assets/github_logo.png";
 
 export const socials = [
   {
+    url: "123a1123sd",
+    Icon: AiFillLinkedin,
+  },
+  {
     url: "https://github.com/Jasonyecyec",
     Icon: AiFillGithub,
   },
@@ -38,10 +42,6 @@ export const socials = [
     Icon: BiLogoGmail,
   },
 
-  {
-    url: "123a1123sd",
-    Icon: AiFillLinkedin,
-  },
   {
     url: "https://www.facebook.com/jason.yecyec.5",
     Icon: BsFacebook,

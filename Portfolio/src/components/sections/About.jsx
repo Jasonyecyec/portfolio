@@ -11,7 +11,7 @@ const About = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-44 ">
+    <section className="mt-44 " id="about">
       <h2
         className={`${textColorPrimaryFunction(
           isActive
