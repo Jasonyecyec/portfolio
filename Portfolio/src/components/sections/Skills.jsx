@@ -25,8 +25,10 @@ const Skills = () => {
         {technologies.map(({ Icon, name, img }) => (
           <div
             className={`group rounded  ${
-              isActive ? "border-2 border-[#A1A3A4]" : "shadow-md"
-            } p-2 hover:border-darkPrimary duration-300 min-w-[5rem]`}
+              isActive
+                ? "border-2 border-[#1B3B41] shadow-md bg-[#1B3B41]"
+                : "shadow-md"
+            } p-2  hover:border-darkPrimary  duration-300 min-w-[5rem]`}
             key={name}
           >
             <p
