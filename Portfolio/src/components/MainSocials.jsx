@@ -10,7 +10,7 @@ const MainSocials = () => {
       <ul className="flex  justify-between w-9/12">
         {socials.map(({ url, Icon }) => (
           <li key={url}>
-            <a href="">
+            <a href={url}>
               <button
                 className={`rounded-full ${
                   isActive ? "bg-[#1B3B41]" : "bg-[#BBBEFF]"
