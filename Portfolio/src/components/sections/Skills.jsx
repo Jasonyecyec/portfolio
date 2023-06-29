@@ -22,17 +22,27 @@ const Skills = () => {
       </h2>
 
       <div className="flex items-center justify-center flex-wrap gap-5  mt-10 ">
-        {technologies.map(({ Icon, name }) => (
-          <div className="group rounded border-2 border-[#A1A3A4] p-2 hover:border-darkPrimary duration-300">
+        {technologies.map(({ Icon, name, img }) => (
+          <div
+            className={`group rounded  ${
+              isActive ? "border-2 border-[#A1A3A4]" : "shadow-md"
+            } p-2 hover:border-darkPrimary duration-300 min-w-[5rem]`}
+            key={name}
+          >
             <p
-              className={`${textColorSecondaryFunction(
-                isActive
-              )} flex  flex-col items-center justify-center text-base`}
+              className={`${
+                isActive ? "text-[#A1A3A4]" : "text-[#6A6A6A]"
+              } flex flex-col items-center justify-center text-base`}
             >
-              <Icon
-                className={`text-white text-2xl group-hover:text-darkPrimary`}
-              />
-              <span className="mt-1"> {name}</span>
+              {isActive ? (
+                <Icon
+                  className={`text-white text-2xl group-hover:text-darkPrimary`}
+                />
+              ) : (
+                <img src={img} alt="" className="text-2xl" />
+              )}
+
+              <span className="mt-1">{name}</span>
             </p>
           </div>
         ))}
