@@ -58,11 +58,11 @@ export const navigation = [
     url: "/#skills",
   },
   {
-    name: "About",
+    name: "Projects",
     url: "/#about",
   },
   {
-    name: "About",
+    name: "Contact",
     url: "/#about",
   },
 ];

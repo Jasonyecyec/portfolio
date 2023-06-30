@@ -15,7 +15,7 @@ function App() {
 
   return (
     <main
-      className={`p-5 ${
+      className={`p-6 ${
         isActive ? "bg-dark" : "bg-white"
       } ease-in-out	duration-300`}
     >
