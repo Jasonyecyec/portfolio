@@ -9,7 +9,7 @@ const Contact = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-24 mb-24">
+    <section className="mt-24 mb-24" id="contact">
       <h2
         className={`${textColorPrimaryFunction(
           isActive
