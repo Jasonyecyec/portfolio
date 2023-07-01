@@ -30,19 +30,23 @@ import Github from "@/assets/github_logo.png";
 
 export const socials = [
   {
+    position: 1,
     url: "123a1123sd",
     Icon: AiFillLinkedin,
   },
   {
+    position: 2,
     url: "https://github.com/Jasonyecyec",
     Icon: AiFillGithub,
   },
   {
+    position: 3,
     url: "https://mail.google.com/mail/u/0/#inbox",
     Icon: BiLogoGmail,
   },
 
   {
+    position: 4,
     url: "https://www.facebook.com/jason.yecyec.5",
     Icon: BsFacebook,
   },

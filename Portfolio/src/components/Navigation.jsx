@@ -110,7 +110,7 @@ const Navigation = () => {
     <div
       className={` flex justify-between items-center fixed top-0 left-0 px-6 py-6 w-[100%] ${
         isActive ? "bg-dark" : "bg-white"
-      } z-10 ease-in-out duration-300 ${isHidden ? "hidden" : ""}`}
+      } z-10 ease-in-out duration-300 ${isHidden ? "hidden" : ""} md:px-14`}
     >
       <div>
         <p

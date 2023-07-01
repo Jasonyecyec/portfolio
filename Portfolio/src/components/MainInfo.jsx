@@ -78,53 +78,55 @@ const MainInfo = () => {
   };
 
   return (
-    <section>
+    <section className="md:grid grid-cols-2">
       <Navigation />
 
-      <div className="mt-24 space-y-4">
-        <p
-          className={`${textColorSecondaryFunction(
-            isActive
-          )} text-xl font-semibold`}
-        >
-          Hi there, I'm
-        </p>
-        <h1
-          className={`${textColorPrimaryFunction(
-            isActive
-          )} font-montserrat text-4xl font-extrabold`}
-        >
-          Jason Yecyec
-        </h1>
-        <p className={`${textColorSecondaryFunction(isActive)} text-xl`}>
-          An aspiring <span className="font-bold"> Software Engineer</span>
-        </p>
-        <p className={`${textColorSecondaryFunction(isActive)} mb-36`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-      </div>
+      <div className="">
+        <div className="mt-24 space-y-4">
+          <p
+            className={`${textColorSecondaryFunction(
+              isActive
+            )} text-xl font-semibold`}
+          >
+            Hi there, I'm
+          </p>
+          <h1
+            className={`${textColorPrimaryFunction(
+              isActive
+            )} font-montserrat text-4xl font-extrabold`}
+          >
+            Jason Yecyec
+          </h1>
+          <p className={`${textColorSecondaryFunction(isActive)} text-xl`}>
+            An aspiring <span className="font-bold"> Software Engineer</span>
+          </p>
+          <p className={`${textColorSecondaryFunction(isActive)} mb-36`}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
 
-      <div className="flex mt-10 space-x-7">
-        <CTAButton isActive={isActive}>
-          <span className={` font-montserrat font-semibold`}>
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              About me
-            </Link>
-          </span>
-        </CTAButton>
+        <div className="flex mt-10 space-x-7">
+          <CTAButton isActive={isActive}>
+            <span className={` font-montserrat font-semibold`}>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                About me
+              </Link>
+            </span>
+          </CTAButton>
 
-        <CTAButton isActive={isActive}>
-          <span className={`font-montserrat font-semibold`}>Resume</span>
-        </CTAButton>
+          <CTAButton isActive={isActive}>
+            <span className={`font-montserrat font-semibold`}>Resume</span>
+          </CTAButton>
+        </div>
       </div>
 
       <MainSocials />

@@ -10,7 +10,7 @@ const Menu = styled.ul`
   top: 4rem;
   background-color: ${({ isActive }) => (isActive ? "#1B3B41" : "#E6E6E6")};
   color: ${({ isActive }) => (isActive ? "#B7B4B4" : "#121212")};
-  // transform: ${({ isShow }) => (isShow ? "" : "")};
+  transform: ${({ isShow }) => (isShow ? "" : "translateY(-120%)")};
   opacity: ${({ isShow }) => (isShow ? "1" : "0")};
   transition: transform 350ms ease-in-out, opacity 350ms ease-in-out;
   list-style-type: none;
