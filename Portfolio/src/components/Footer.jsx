@@ -11,7 +11,7 @@ const Footer = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <footer className="my-20 text-center space-y-3">
+    <footer className="mt-24 mb-16 text-center space-y-3 md:mb-0">
       <div className="flex justify-center">
         <ul className="flex justify-between w-6/12">
           {socials.map(({ url, Icon }) => (

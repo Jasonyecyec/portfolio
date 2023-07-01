@@ -11,11 +11,11 @@ const Skills = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-24 mb-24 ease-in-out " id="skills">
+    <section className="mt-24 ease-in-out " id="skills">
       <h2
         className={`${textColorPrimaryFunction(
           isActive
-        )} text-3xl font-bold font-montserrat`}
+        )} text-3xl font-bold font-montserrat md:text-4xl`}
       >
         Skills <span className="text-[#A1A3A4]">&</span>{" "}
         <span className="block">Technologies</span>
