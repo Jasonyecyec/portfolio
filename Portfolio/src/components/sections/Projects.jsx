@@ -50,24 +50,30 @@ const Projects = () => {
                     <AiFillGithub />
                   </span>
                 </a>
-                <a
-                  href={item.links.github}
-                  className={`flex items-center ${
-                    isActive ? "hover:text-[#FFFFFF]" : "hover:text-[#121212]"
-                  } ease-in-out duration-300`}
-                >
-                  Link
-                  <span className="ml-1">
-                    <BsArrowUpRight />
-                  </span>
-                </a>
+                {item.links.url !== "" ? (
+                  <a
+                    href={item.links.url}
+                    className={`flex items-center ${
+                      isActive ? "hover:text-[#FFFFFF]" : "hover:text-[#121212]"
+                    } ease-in-out duration-300`}
+                  >
+                    Link
+                    <span className="ml-1">
+                      <BsArrowUpRight />
+                    </span>
+                  </a>
+                ) : (
+                  <p>Link not available</p>
+                )}
               </div>
 
               <p>{item.info}</p>
               <TechStacks list={item.technologies} isActive={isActive} />
             </div>
 
-            <div className="bg-slate-300 h-44 w-11/12	 rounded-md ">sd</div>
+            <div className="bg-slate-300 h-44 w-11/12	shadow-md rounded-md">
+              <img src={item.projectImage} alt="" className="rounded-md " />
+            </div>
           </div>
         ))}
       </div>

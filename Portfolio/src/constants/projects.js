@@ -1,3 +1,6 @@
+import ReactBank from "@/assets/react_bank.png";
+import Ribrary from "@/assets/Ribrary.png";
+
 export const projects = [
   {
     name: "OtakuFlix",
@@ -32,7 +35,7 @@ export const projects = [
   {
     name: "Ribrary",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    projectImage: "",
+    projectImage: Ribrary,
     technologies: [
       "Bootstrap",
       "PHP",
@@ -61,8 +64,8 @@ export const projects = [
 
   {
     name: "React Bank Design",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    projectImage: "",
+    info: "I developed the this project as a means to enhance and familiarize myself with React.js and Tailwind CSS. The project involved following a tutorial provided by JavaScript Mastery channel , which guided me through the entire development process.",
+    projectImage: ReactBank,
     technologies: ["React.js", "Tailwind CSS", "Javascript"],
     links: {
       github: "https://github.com/Jasonyecyec/React-Bank-Design",
