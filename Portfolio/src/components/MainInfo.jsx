@@ -78,7 +78,7 @@ const MainInfo = () => {
   };
 
   return (
-    <section className="md:grid grid-cols-2">
+    <section className="md:grid grid-cols-2 ">
       <Navigation />
 
       <div className="">

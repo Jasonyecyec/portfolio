@@ -7,12 +7,13 @@ export const projects = [
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     projectImage: "",
     technologies: [
+      "Java",
       "React.js",
+      "Firebase",
       "Tailwind CSS",
       "Spring Boot",
       "Gogoanime API",
-      "Java",
-      "Firebase",
+
       "Javascript",
     ],
     links: {

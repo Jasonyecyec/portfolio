@@ -9,18 +9,20 @@ const Contact = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-24 mb-24" id="contact">
-      <h2
-        className={`${textColorPrimaryFunction(
-          isActive
-        )} text-3xl font-bold font-montserrat`}
-      >
-        Let's get in touch
-      </h2>
-      <p className={`${textColorSecondaryFunction(isActive)} mt-2`}>
-        Do you fancy saying hi to me or you want to get started with your
-        project and you need my help? Feel free to contact me.
-      </p>
+    <section className="mt-24 md:grid md:grid-cols-2 md:gap-x-5  " id="contact">
+      <div className="md:mt-20">
+        <h2
+          className={`${textColorPrimaryFunction(
+            isActive
+          )} text-3xl font-bold font-montserrat md:`}
+        >
+          Let's get in touch
+        </h2>
+        <p className={`${textColorSecondaryFunction(isActive)} mt-2`}>
+          Do you fancy saying hi to me or you want to get started with your
+          project and you need my help? Feel free to contact me.
+        </p>
+      </div>
 
       <div className="mt-10">
         <form action="">
