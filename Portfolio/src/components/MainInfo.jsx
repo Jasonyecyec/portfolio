@@ -9,6 +9,7 @@ import {
 import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import MainSocials from "./MainSocials";
+import { Link } from "react-scroll";
 
 const CTAButton = styled.button`
   position: relative;
@@ -80,7 +81,7 @@ const MainInfo = () => {
     <section>
       <Navigation />
 
-      <div className="mt-20 space-y-4">
+      <div className="mt-24 space-y-4">
         <p
           className={`${textColorSecondaryFunction(
             isActive
@@ -109,7 +110,15 @@ const MainInfo = () => {
       <div className="flex mt-10 space-x-7">
         <CTAButton isActive={isActive}>
           <span className={` font-montserrat font-semibold`}>
-            <a href="#about">About me</a>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              About me
+            </Link>
           </span>
         </CTAButton>
 

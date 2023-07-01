@@ -51,19 +51,19 @@ export const socials = [
 export const navigation = [
   {
     name: "About",
-    url: "/#about",
+    url: "about",
   },
   {
     name: "Skills",
-    url: "/#skills",
+    url: "skills",
   },
   {
     name: "Projects",
-    url: "/#about",
+    url: "projects",
   },
   {
     name: "Contact",
-    url: "/#about",
+    url: "contact",
   },
 ];
 

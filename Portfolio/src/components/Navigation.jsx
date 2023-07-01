@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useToggleMode } from "@/store.js";
 import { navigation } from "@/constants";
-import { GiHamburgerMenu } from "react-icons/gi";
 import styled from "styled-components";
-import { MdOutlineDarkMode } from "react-icons/md";
-import { FiSun } from "react-icons/fi";
+
+import MobileMenu from "./MobileMenu";
 
 const MenuToggle = styled.div`
   display: block;
@@ -64,30 +63,55 @@ const MenuSpan = styled.span`
   }
 `;
 
-const Menu = styled.ul`
-  position: absolute;
-  top: 3rem;
-  left: 0;
-  width: 100%;
-  background-color: ${({ isActive }) => (isActive ? "#1B3B41" : "#E6E6E6")};
-  color: ${({ isActive }) => (isActive ? "#B7B4B4" : "#121212")};
-  transform: ${({ isShow }) => (isShow ? "" : "translateY(-100%)")};
-  opacity: ${({ isShow }) => (isShow ? "1" : "0")};
-  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
-  list-style-type: none;
-  margin: 0;
-  border-radius: 0.25rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-`;
-
 const Navigation = () => {
   const { toggleActive, isActive, isShow, toggleShow } = useToggleMode();
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
+  const [isHidden, setIsHidden] = useState(true);
+
+  const menuToggle = useRef(null);
+
+  useEffect(() => {
+    menuToggle.current.checked = isShow;
+  }, [isShow]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setIsScrollingDown(currentScrollPos > prevScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
+  useEffect(() => {
+    let timeoutId;
+
+    if (!isScrollingDown) {
+      timeoutId = setTimeout(() => {
+        setIsHidden(false);
+      }, 300);
+    } else {
+      setIsHidden(true);
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [isScrollingDown]);
 
   return (
-    <div className="flex justify-between items-center relative">
+    <div
+      className={` flex justify-between items-center fixed top-0 left-0 px-6 py-6 w-[100%] ${
+        isActive ? "bg-dark" : "bg-white"
+      } z-10 ease-in-out duration-300 ${isHidden ? "hidden" : ""}`}
+    >
       <div>
         <p
           className={`${
@@ -98,10 +122,8 @@ const Navigation = () => {
         </p>
       </div>
 
-      {/* <nav role="navigation"> */}
-
       <MenuToggle id="menuToggle" onClick={toggleShow}>
-        <MenuInput type="checkbox" isActive={isActive} />
+        <MenuInput type="checkbox" isActive={isActive} ref={menuToggle} />
 
         <MenuSpan isActive={isActive}></MenuSpan>
         <MenuSpan isActive={isActive}></MenuSpan>
@@ -109,43 +131,12 @@ const Navigation = () => {
         <p></p>
       </MenuToggle>
 
-      {/* </nav> */}
-      <Menu
-        id="menu"
+      <MobileMenu
         isActive={isActive}
         isShow={isShow}
-        className="flex flex-col items-center space-y-5 p-5  "
-      >
-        {isActive ? (
-          <FiSun
-            className="absolute top-4 right-4 text-2xl hover:text-whitePrimay cursor-pointer"
-            onClick={toggleActive}
-          />
-        ) : (
-          <MdOutlineDarkMode
-            className="absolute top-4 right-4 text-2xl hover:text-darkPrimary cursor-pointer"
-            onClick={toggleActive}
-          />
-        )}
-
-        {navigation.map((item, index) => (
-          <a
-            href={item.url}
-            className={`${
-              isActive ? "hover:bg-[#06242A]" : "hover:bg-[#CCCCCC]"
-            } w-full text-center p-1 rounded ease-in-out  duration-300`}
-            key={index}
-          >
-            <li>{item.name}</li>
-          </a>
-        ))}
-      </Menu>
-
-      <ul className="flex text-darkSecondary hidden">
-        {navigation.map((item, index) => (
-          <li key={index}>{item.name}</li>
-        ))}
-      </ul>
+        toggleActive={toggleActive}
+        navigation={navigation}
+      />
     </div>
   );
 };

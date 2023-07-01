@@ -14,7 +14,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 const Projects = () => {
   const { isActive } = useToggleMode();
   return (
-    <section className="mt-24 mb-24">
+    <section className="mt-24 mb-24" id="projects">
       <h2
         className={`${textColorPrimaryFunction(
           isActive
