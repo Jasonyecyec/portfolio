@@ -79,7 +79,7 @@ const Projects = () => {
               <img
                 src={item.projectImage}
                 alt=""
-                className="rounded-md h-full w-full smLaptop:max-w-md  shadow-md "
+                className="rounded-md h-full w-11/12 smLaptop:max-w-md  shadow-md "
               />
             </div>
           </div>

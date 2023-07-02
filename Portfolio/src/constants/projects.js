@@ -1,5 +1,6 @@
 import ReactBank from "@/assets/react_bank.png";
 import Ribrary from "@/assets/Ribrary.png";
+import PatientAppointment from "@/assets/patient_appointment.png";
 
 export const projects = [
   {
@@ -54,7 +55,7 @@ export const projects = [
   {
     name: "Patient Appointment Management System",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    projectImage: "",
+    projectImage: PatientAppointment,
     technologies: ["Bootstrap", "ASP.NET MVC", "MySQL", "C#"],
     links: {
       github: "https://github.com/Jasonyecyec/patient_appointment",
