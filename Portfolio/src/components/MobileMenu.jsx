@@ -31,7 +31,7 @@ const MobileMenu = ({ isActive, isShow, toggleActive, navigation }) => {
         id="menu"
         isActive={isActive}
         isShow={isShow}
-        className="flex flex-col items-center space-y-5 p-5  z-10 w-[87%] "
+        className="flex flex-col items-center space-y-5 p-5  z-10 w-[87%] smLaptop:hidden "
       >
         {isActive ? (
           <FiSun
@@ -50,7 +50,7 @@ const MobileMenu = ({ isActive, isShow, toggleActive, navigation }) => {
             to={item.url}
             spy={true}
             smooth={true}
-            offset={50}
+            offset={-100}
             duration={500}
             className={`${
               isActive ? "hover:bg-[#06242A]" : "hover:bg-[#CCCCCC]"

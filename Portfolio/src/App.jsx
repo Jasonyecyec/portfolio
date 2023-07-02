@@ -17,7 +17,7 @@ function App() {
     <main
       className={`p-6 ${
         isActive ? "bg-dark" : "bg-white"
-      } ease-in-out	duration-300 flex flex-col items-center md:p-14`}
+      } ease-in-out	duration-300 flex flex-col items-center md:p-14 `}
     >
       <MainInfo />
       <About />

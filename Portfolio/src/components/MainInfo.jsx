@@ -78,29 +78,37 @@ const MainInfo = () => {
   };
 
   return (
-    <section className="md:grid grid-cols-2 ">
+    <section className="md:grid grid-cols-2 mt-24  smLaptop:w-10/12 smLaptop:mt-28 smLaptop:gap-x-14">
       <Navigation />
 
       <div className="">
-        <div className="mt-24 space-y-4">
+        <div className="space-y-4 smLaptop:space-y-6 ">
           <p
             className={`${textColorSecondaryFunction(
               isActive
-            )} text-xl font-semibold`}
+            )} text-xl font-semibold `}
           >
             Hi there, I'm
           </p>
           <h1
             className={`${textColorPrimaryFunction(
               isActive
-            )} font-montserrat text-4xl font-extrabold`}
+            )} font-montserrat text-4xl font-extrabold smLaptop:text-6xl`}
           >
             Jason Yecyec
           </h1>
-          <p className={`${textColorSecondaryFunction(isActive)} text-xl`}>
+          <p
+            className={`${textColorSecondaryFunction(
+              isActive
+            )} text-xl smLaptop:text-2xl`}
+          >
             An aspiring <span className="font-bold"> Software Engineer</span>
           </p>
-          <p className={`${textColorSecondaryFunction(isActive)} mb-36`}>
+          <p
+            className={`${textColorSecondaryFunction(
+              isActive
+            )} mb-36  text-base`}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -115,7 +123,7 @@ const MainInfo = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-100}
                 duration={500}
               >
                 About me

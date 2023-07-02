@@ -9,12 +9,15 @@ const Contact = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-24 md:grid md:grid-cols-2 md:gap-x-5  " id="contact">
+    <section
+      className="mt-24 md:grid md:grid-cols-2 md:gap-x-5 smLaptop:w-10/12 smLaptop:gap-x-12 "
+      id="contact"
+    >
       <div className="md:mt-20">
         <h2
           className={`${textColorPrimaryFunction(
             isActive
-          )} text-3xl font-bold font-montserrat md:`}
+          )} text-3xl font-bold font-montserrat  smLaptop:text-5xl`}
         >
           Let's get in touch
         </h2>
