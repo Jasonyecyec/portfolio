@@ -14,7 +14,7 @@ const MainSocials = () => {
 
   return (
     <div className="flex justify-center ">
-      <ul className="flex  justify-between w-9/12  md:relative md:w-full">
+      <ul className="flex  justify-between w-9/12 mt-24  md:relative md:w-full smLaptop:mt-0">
         {socials.map(({ url, Icon, position }) => (
           <li
             key={url}

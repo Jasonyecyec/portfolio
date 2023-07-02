@@ -61,7 +61,7 @@ const About = () => {
             <img
               src={AboutImg}
               alt=""
-              className="h-80 smLaptop:h-[21rem] grayscale w-full	hover:grayscale-0 ease-in-out duration-300"
+              className="object-cover h-80 smLaptop:h-[21rem] grayscale w-full	hover:grayscale-0 ease-in-out duration-300"
             />
           </div>
         </div>
