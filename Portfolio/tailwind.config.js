@@ -15,8 +15,9 @@ export default {
         xs: "360px",
         xr: "414px", // iPhone XR
         sm: "480px",
-        md: "768px",
+        md: "768px", // tablet
         lg: "976px",
+        smLaptop: "1366px",
         xl: "1440px",
       },
       fontFamily: {

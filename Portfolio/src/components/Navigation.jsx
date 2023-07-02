@@ -2,6 +2,10 @@ import React, { useRef, useEffect, useState } from "react";
 import { useToggleMode } from "@/store.js";
 import { navigation } from "@/constants";
 import styled from "styled-components";
+import { Link } from "react-scroll";
+
+import { FiSun } from "react-icons/fi";
+import { MdOutlineDarkMode } from "react-icons/md";
 
 import MobileMenu from "./MobileMenu";
 
@@ -110,7 +114,9 @@ const Navigation = () => {
     <div
       className={` flex justify-between items-center fixed top-0 left-0 px-6 py-6 w-[100%] ${
         isActive ? "bg-dark" : "bg-white"
-      } z-10 ease-in-out duration-300 ${isHidden ? "hidden" : ""} md:px-14`}
+      } z-10 ease-in-out duration-300 ${
+        isHidden ? "hidden" : ""
+      } md:px-14 smLaptop:px-24 smLaptop:py-8`}
     >
       <div>
         <p
@@ -122,14 +128,60 @@ const Navigation = () => {
         </p>
       </div>
 
-      <MenuToggle id="menuToggle" onClick={toggleShow}>
-        <MenuInput type="checkbox" isActive={isActive} ref={menuToggle} />
+      <div className=" hidden smLaptop:block">
+        <ul
+          className={`flex space-x-16 ${
+            isActive ? "text-[#999999]" : "text-[#818384]"
+          } text-sm items-center  font-montserrat font-semibold`}
+        >
+          {navigation.map((item, index) => (
+            <Link
+              to={item.url}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              key={index}
+            >
+              <li
+                className={`${
+                  isActive ? "hover:text-darkPrimary" : "hover:text-whitePrimay"
+                } w-full text-center  ease-in-out  duration-300 cursor-pointer`}
+              >
+                {item.name}
+              </li>
+            </Link>
+          ))}
 
-        <MenuSpan isActive={isActive}></MenuSpan>
-        <MenuSpan isActive={isActive}></MenuSpan>
-        <MenuSpan isActive={isActive}></MenuSpan>
-        <p></p>
-      </MenuToggle>
+          {isActive ? (
+            <li>
+              <FiSun
+                className="text-2xl hover:text-darkPrimary cursor-pointer z-10"
+                onClick={toggleActive}
+              />
+            </li>
+          ) : (
+            <li>
+              {" "}
+              <MdOutlineDarkMode
+                className="text-2xl  hover:text-whitePrimay cursor-pointer"
+                onClick={toggleActive}
+              />{" "}
+            </li>
+          )}
+        </ul>
+      </div>
+
+      <div className="smLaptop:hidden">
+        <MenuToggle id="menuToggle" onClick={toggleShow}>
+          <MenuInput type="checkbox" isActive={isActive} ref={menuToggle} />
+
+          <MenuSpan isActive={isActive}></MenuSpan>
+          <MenuSpan isActive={isActive}></MenuSpan>
+          <MenuSpan isActive={isActive}></MenuSpan>
+          <p></p>
+        </MenuToggle>
+      </div>
 
       <MobileMenu
         isActive={isActive}

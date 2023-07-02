@@ -1,13 +1,9 @@
 import React from "react";
 
-const TechStacks = ({ list, isActive, index }) => {
+const TechStacks = ({ list, isActive }) => {
   return (
     <div className="">
-      <ul
-        className={`flex flex-wrap gap-3  ${
-          index == 0 || index == 2 || index == 4 ? "md:justify-end" : ""
-        }`}
-      >
+      <ul className={`flex flex-wrap gap-3 `}>
         {list.map((item, index) => (
           <li
             className={`${

@@ -14,11 +14,11 @@ import { BsArrowUpRight } from "react-icons/bs";
 const Projects = () => {
   const { isActive } = useToggleMode();
   return (
-    <section className="mt-24 " id="projects">
+    <section className="mt-24 smLaptop:w-10/12" id="projects">
       <h2
         className={`${textColorPrimaryFunction(
           isActive
-        )} text-3xl font-bold font-montserrat md:text-4xl`}
+        )} text-3xl font-bold font-montserrat md:text-4xl smLaptop:text-5xl`}
       >
         Projects
       </h2>
@@ -28,29 +28,21 @@ const Projects = () => {
           <div
             className={`${textColorSecondaryFunction(
               isActive
-            )} space-y-5  md:flex md:gap-x-5  ${
+            )} space-y-5  md:flex md:gap-x-5 smLaptop:gap-x-12  ${
               index == 1 || index == 3 ? "md:flex-row-reverse" : ""
             } `}
             key={index}
           >
-            <div
-              className={`space-y-3 md:w-1/2 ${
-                index == 0 || index == 2 || index == 4 ? "md:text-right" : ""
-              }`}
-            >
+            <div className={`space-y-3 md:w-1/2  `}>
               <p
                 className={`${
                   isActive ? "text-[#FFFFFF]" : "text-[#121212]"
-                } font-semibold text-xl `}
+                } font-semibold text-xl smLaptop:text-2xl `}
               >
                 {item.name}
               </p>
 
-              <div
-                className={`flex space-x-4 ${
-                  index == 0 || index == 2 || index == 4 ? "md:justify-end" : ""
-                }`}
-              >
+              <div className={`flex space-x-4 `}>
                 <a
                   href={item.links.github}
                   className={`flex items-center ${
@@ -80,15 +72,15 @@ const Projects = () => {
               </div>
 
               <p>{item.info}</p>
-              <TechStacks
-                list={item.technologies}
-                isActive={isActive}
-                index={index}
-              />
+              <TechStacks list={item.technologies} isActive={isActive} />
             </div>
 
-            <div className="bg-slate-300 h-44 w-11/12	shadow-md rounded-md  md:w-1/2 ">
-              <img src={item.projectImage} alt="" className="rounded-md " />
+            <div className="h-44 w-full rounded-md flex items-center justify-start  md:w-1/2 smLaptop:h-60">
+              <img
+                src={item.projectImage}
+                alt=""
+                className="rounded-md h-full w-full smLaptop:max-w-md  shadow-md "
+              />
             </div>
           </div>
         ))}
