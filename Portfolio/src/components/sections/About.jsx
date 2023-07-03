@@ -25,27 +25,40 @@ const About = () => {
 
       <div className="md:grid md:grid-cols-2 smLaptop:gap-x-10 ">
         <div
-          className={`${textColorSecondaryFunction(isActive)} space-y-8 mt-10`}
+          className={`${textColorSecondaryFunction(
+            isActive
+          )} space-y-8 mt-10 smLaptop:text-lg`}
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            I am passionate about developing systems, which is why I chose
+            software engineering as my career path. Throughout my college years,
+            I have dedicated myself to honing my{" "}
+            <span className="font-semibold"> problem-solving skills </span> and
+            acquiring a solid foundation in{" "}
+            <span className="font-semibold"> Java </span>through platforms like
+            mooc.fi. Simultaneously, I have been mastering front-end development
+            by
+            <span className="font-semibold">
+              {" "}
+              watching online courses
+            </span> and{" "}
+            <span className="font-semibold">building projects </span> .
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Currently, I am a fourth-year college student studying Information
+            Technology. My main focus is to master{" "}
+            <span className="font-semibold"> React.js </span> and the{" "}
+            <span className="font-semibold"> Spring Boot </span> framework while
+            creating personal projects. I am open to learning other web
+            technologies and eagerly looking forward to exploring mobile
+            development.
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            In my spare time, I enjoy playing games, watching movies, hanging
+            out with loved ones (including my dogs), and occasionally reading
+            books.
           </p>
         </div>
 

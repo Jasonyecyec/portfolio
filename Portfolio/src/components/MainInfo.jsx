@@ -110,12 +110,11 @@ const MainInfo = () => {
           <p
             className={`${textColorSecondaryFunction(
               isActive
-            )} mb-36  text-base`}
+            )} mb-36  text-base mdDesktop:text-lg font-lato`}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            I have a passion for building exceptional websites that captivate
+            users and deliver outstanding experiences. I am constantly seeking
+            to learn and master the latest web technologies and frameworks.
           </p>
         </div>
 
