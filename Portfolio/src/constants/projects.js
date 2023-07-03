@@ -36,7 +36,7 @@ export const projects = [
   },
   {
     name: "Ribrary",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    info: "Ribray is a digital library and online social reading platform. It provides users with various copies of e-books, audiobooks, magazines, research documents, and podcasts. Users can also upload their own content and receive feedback from other users.",
     projectImage: Ribrary,
     technologies: [
       "Bootstrap",
@@ -54,7 +54,7 @@ export const projects = [
   },
   {
     name: "Patient Appointment Management System",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    info: "This system  allow patients to easily make appointments online. It can manage patient records, track appointment history, and handle doctors' availability. Additionally, it notifies patients through email regarding their scheduled appointments.",
     projectImage: Patient,
     technologies: ["Bootstrap", "ASP.NET MVC", "MySQL", "C#"],
     links: {
@@ -66,7 +66,7 @@ export const projects = [
 
   {
     name: "React Bank Design",
-    info: "I developed the this project as a means to enhance and familiarize myself with React.js and Tailwind CSS. The project involved following a tutorial provided by JavaScript Mastery channel , which guided me through the entire development process.",
+    info: "This project serves as a means for me to enhance and familiarize myself with React.js and Tailwind CSS. It involved following a tutorial provided by the JavaScript Mastery channel, which guided me through the entire development process.",
     projectImage: ReactBank,
     technologies: ["React.js", "Tailwind CSS", "Javascript"],
     links: {
