@@ -10,10 +10,10 @@ const Contact = () => {
 
   return (
     <section
-      className="mt-24 md:grid md:grid-cols-2 md:gap-x-5 smLaptop:w-10/12 smLaptop:gap-x-12 "
+      className="mt-24 md:grid md:grid-cols-2 md:gap-x-5 smLaptop:w-10/12 smLaptop:gap-x-12 mdDesktop:max-w-6xl "
       id="contact"
     >
-      <div className="md:mt-20">
+      <div className="md:mt-20 space-y-2 md:space-y-3 smLaptop:space-y-6 mdDesktop:space-y-8">
         <h2
           className={`${textColorPrimaryFunction(
             isActive
@@ -21,7 +21,7 @@ const Contact = () => {
         >
           Let's get in touch
         </h2>
-        <p className={`${textColorSecondaryFunction(isActive)} mt-2`}>
+        <p className={`${textColorSecondaryFunction(isActive)}  md:w-11/12`}>
           Do you fancy saying hi to me or you want to get started with your
           project and you need my help? Feel free to contact me.
         </p>

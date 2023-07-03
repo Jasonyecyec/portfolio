@@ -24,7 +24,7 @@ const Skills = () => {
       </h2>
 
       <div className="smLaptop:w-full  smLaptop:flex smLaptop: justify-center">
-        <div className="flex flex-wrap items-center justify-center  gap-5  mt-10  smLaptop:max-w-xl ">
+        <div className="flex flex-wrap items-center justify-center  gap-5  mt-10 smLaptop:mt-12  smLaptop:max-w-xl mdDesktop:max-w-2xl">
           {technologies.map(({ Icon, name, img }) => (
             <div
               className={`group rounded  ${

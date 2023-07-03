@@ -17,7 +17,9 @@ export default {
         sm: "480px",
         md: "768px", // tablet
         lg: "976px",
-        smLaptop: "1366px",
+        smLaptop: "1366px", // small laptop
+        mdDesktop: "1600px", // medium desktop
+        lgDesktop: "1800px", // large desktop
         xl: "1440px",
       },
       fontFamily: {

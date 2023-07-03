@@ -14,7 +14,10 @@ import { BsArrowUpRight } from "react-icons/bs";
 const Projects = () => {
   const { isActive } = useToggleMode();
   return (
-    <section className="mt-24 smLaptop:w-10/12" id="projects">
+    <section
+      className="mt-24 smLaptop:w-10/12 mdDesktop:max-w-6xl "
+      id="projects"
+    >
       <h2
         className={`${textColorPrimaryFunction(
           isActive
@@ -23,12 +26,12 @@ const Projects = () => {
         Projects
       </h2>
 
-      <div className="space-y-12 mt-10">
+      <div className="space-y-12 mt-10 smLaptop:space-y-20">
         {projects.map((item, index) => (
           <div
             className={`${textColorSecondaryFunction(
               isActive
-            )} space-y-5  md:flex md:gap-x-5 smLaptop:gap-x-12  ${
+            )} space-y-5  md:flex md:gap-x-5 smLaptop:gap-x-12 smLaptop:space-y-0 ${
               index == 1 || index == 3 ? "md:flex-row-reverse" : ""
             } `}
             key={index}
@@ -75,7 +78,7 @@ const Projects = () => {
               <TechStacks list={item.technologies} isActive={isActive} />
             </div>
 
-            <div className="h-44 w-full rounded-md flex items-center justify-start  md:w-1/2 smLaptop:h-60">
+            <div className="h-44 w-full rounded-md flex items-center md:justify-center smLaptop:justify-start  md:w-1/2 smLaptop:h-60 mdDesktop:h-64">
               <img
                 src={item.projectImage}
                 alt=""

@@ -116,7 +116,7 @@ const Navigation = () => {
         isActive ? "bg-dark" : "bg-white"
       } z-10 ease-in-out duration-300 ${
         isHidden ? "hidden" : ""
-      } md:px-14 smLaptop:px-24 smLaptop:py-8`}
+      } md:px-14 smLaptop:px-24 smLaptop:py-8 mdDesktop:px-40 lgDesktop:px-64 `}
     >
       <div>
         <p
@@ -130,9 +130,9 @@ const Navigation = () => {
 
       <div className=" hidden smLaptop:block">
         <ul
-          className={`flex space-x-16 ${
+          className={`flex space-x-16  ${
             isActive ? "text-[#999999]" : "text-[#818384]"
-          } text-sm items-center  font-montserrat font-semibold`}
+          } text-sm items-center  font-montserrat font-semibold `}
         >
           {navigation.map((item, index) => (
             <Link

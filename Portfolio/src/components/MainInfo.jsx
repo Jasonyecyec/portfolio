@@ -78,22 +78,25 @@ const MainInfo = () => {
   };
 
   return (
-    <section className="md:grid grid-cols-2 mt-24  smLaptop:w-10/12 smLaptop:mt-28 smLaptop:gap-x-14">
+    <section
+      className="md:grid grid-cols-2 mt-24  smLaptop:w-10/12 smLaptop:mt-28 smLaptop:gap-x-14 mdDesktop:max-w-6xl mdDesktop:mt-36
+     lgDesktop:mt-48"
+    >
       <Navigation />
 
       <div className="">
-        <div className="space-y-4 smLaptop:space-y-6 ">
+        <div className="space-y-4 smLaptop:space-y-6 mdDesktop:space-y-7 ">
           <p
             className={`${textColorSecondaryFunction(
               isActive
-            )} text-xl font-semibold `}
+            )} text-xl font-semibold mdDesktop:text-2xl`}
           >
             Hi there, I'm
           </p>
           <h1
             className={`${textColorPrimaryFunction(
               isActive
-            )} font-montserrat text-4xl font-extrabold smLaptop:text-6xl`}
+            )} font-montserrat text-4xl font-extrabold smLaptop:text-6xl mdDesktop:text-7xl`}
           >
             Jason Yecyec
           </h1>
