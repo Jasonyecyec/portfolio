@@ -5,6 +5,7 @@ import {
   textColorPrimaryFunction,
   textColorSecondaryFunction,
 } from "@/utils/utils";
+import { motion } from "framer-motion";
 
 import { projects } from "@/constants";
 import TechStacks from "@/components/TechStacks";
@@ -18,13 +19,17 @@ const Projects = () => {
       className="mt-24 smLaptop:w-10/12 mdDesktop:max-w-6xl "
       id="projects"
     >
-      <h2
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
         className={`${textColorPrimaryFunction(
           isActive
         )} text-3xl font-bold font-montserrat md:text-4xl smLaptop:text-5xl`}
       >
         Projects
-      </h2>
+      </motion.h2>
 
       <div className="space-y-12 mt-10 smLaptop:space-y-20">
         {projects.map((item, index) => (
@@ -36,7 +41,13 @@ const Projects = () => {
             } `}
             key={index}
           >
-            <div className={`space-y-3 md:w-1/2  `}>
+            <motion.div
+              initial={{ x: index == 1 || index == 3 ? 100 : -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
+              viewport={{ once: true }}
+              className={`space-y-3 md:w-1/2  `}
+            >
               <p
                 className={`${
                   isActive ? "text-[#FFFFFF]" : "text-[#121212]"
@@ -76,15 +87,20 @@ const Projects = () => {
 
               <p>{item.info}</p>
               <TechStacks list={item.technologies} isActive={isActive} />
-            </div>
+            </motion.div>
 
-            <div className="h-44 w-full rounded-md flex items-center md:justify-center smLaptop:justify-start  md:w-1/2 smLaptop:h-60 mdDesktop:h-64">
+            <motion.div
+              initial={{ x: index == 1 || index == 3 ? -100 : 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
+              viewport={{ once: true }}
+              className="h-44 w-full rounded-md flex items-center md:justify-center smLaptop:justify-start  md:w-1/2 smLaptop:h-60 mdDesktop:h-64 "
+            >
               <img
                 src={item.projectImage}
-                alt=""
-                className="rounded-md h-full w-11/12 smLaptop:max-w-md  shadow-md "
+                className="rounded-md h-full w-11/12 smLaptop:max-w-md  shadow-md bg-slate-200 "
               />
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

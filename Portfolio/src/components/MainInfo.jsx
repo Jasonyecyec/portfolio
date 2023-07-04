@@ -5,6 +5,7 @@ import {
   textColorPrimaryFunction,
   textColorSecondaryFunction,
 } from "@/utils/utils";
+import { motion } from "framer-motion";
 
 import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -86,28 +87,46 @@ const MainInfo = () => {
 
       <div className="">
         <div className="space-y-4 smLaptop:space-y-6 mdDesktop:space-y-7 ">
-          <p
+          <motion.p
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
             className={`${textColorSecondaryFunction(
               isActive
             )} text-xl font-semibold mdDesktop:text-2xl`}
           >
             Hi there, I'm
-          </p>
-          <h1
+          </motion.p>
+
+          <motion.h1
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.5,
+            }}
             className={`${textColorPrimaryFunction(
               isActive
             )} font-montserrat text-4xl font-extrabold smLaptop:text-6xl mdDesktop:text-7xl`}
           >
             Jason Yecyec
-          </h1>
-          <p
+          </motion.h1>
+
+          <motion.p
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
             className={`${textColorSecondaryFunction(
               isActive
             )} text-xl smLaptop:text-2xl`}
           >
             An aspiring <span className="font-bold"> Software Engineer</span>
-          </p>
-          <p
+          </motion.p>
+
+          <motion.p
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
             className={`${textColorSecondaryFunction(
               isActive
             )} mb-36  text-base mdDesktop:text-lg font-lato`}
@@ -115,10 +134,15 @@ const MainInfo = () => {
             I have a passion for building exceptional websites that captivate
             users and deliver outstanding experiences. I am constantly seeking
             to learn and master the latest web technologies and frameworks.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="flex mt-10 space-x-7">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+          className="flex mt-10 space-x-7"
+        >
           <CTAButton isActive={isActive}>
             <span className={` font-montserrat font-semibold`}>
               <Link
@@ -136,7 +160,7 @@ const MainInfo = () => {
           <CTAButton isActive={isActive}>
             <span className={`font-montserrat font-semibold`}>Resume</span>
           </CTAButton>
-        </div>
+        </motion.div>
       </div>
 
       <MainSocials />

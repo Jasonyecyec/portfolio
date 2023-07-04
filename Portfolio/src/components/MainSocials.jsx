@@ -1,6 +1,7 @@
 import React from "react";
 import { socials } from "@/constants";
 import { useToggleMode } from "@/store.js";
+import { motion } from "framer-motion";
 
 const MainSocials = () => {
   const { isActive } = useToggleMode();
@@ -14,17 +15,33 @@ const MainSocials = () => {
     if (position === 4)
       return "bottom-16 right-16 smLaptop:bottom-24 smLaptop:right-32";
   };
+  const variants = {
+    visible: (i) => ({
+      opacity: 1,
+      transition: {
+        delay: i * 0.3,
+      },
+    }),
+    hidden: { opacity: 0 },
+  };
 
   return (
     <div className="flex justify-center ">
       <ul className="flex  justify-between w-9/12 mt-24  md:relative md:w-full smLaptop:mt-0 ">
         {socials.map(({ url, Icon, position }) => (
-          <li
+          <motion.li
+            initial={{ opacity: 0, translateY: 50 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{
+              duration: 1,
+              delay: 1.1 + position * 0.2,
+            }}
             key={url}
             className={`md:absolute  ${getPositionClass(position)}`}
           >
             <a href={url}>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
                 className={`rounded-full ${
                   isActive ? "bg-[#1B3B41]" : "bg-[#BBBEFF]"
                 } w-12 h-12 md:w-14 md:h-14 smLaptop:w-16 smLaptop:h-16 mdDesktop:w-20 mdDesktop:h-20 flex justify-center items-center shadow-md `}
@@ -34,9 +51,9 @@ const MainSocials = () => {
                     isActive ? "text-white" : "text-black"
                   } text-2xl md:text-3xl smLaptop:text-4xl mdDesktop:text-[2.5rem]`}
                 />
-              </button>
+              </motion.button>
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>

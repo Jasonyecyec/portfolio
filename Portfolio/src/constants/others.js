@@ -31,7 +31,7 @@ import Github from "@/assets/github_logo.png";
 export const socials = [
   {
     position: 1,
-    url: "123a1123sd",
+    url: "https://www.linkedin.com/in/jason-yecyec-74545a201/",
     Icon: AiFillLinkedin,
   },
   {
@@ -76,71 +76,85 @@ export const technologies = [
     Icon: IoLogoJavascript,
     name: "Javascript",
     img: Javascript,
+    position: 1,
   },
   {
     Icon: BiLogoJava,
     name: "Java",
     img: Java,
+    position: 2,
   },
   {
     Icon: FaReact,
     name: "React.js",
     img: ReactJS,
+    position: 3,
   },
   {
     Icon: SiSpringboot,
     name: "Spring Boot",
     img: SpringBoot,
+    position: 4,
   },
   {
     Icon: SiSpring,
     name: "Spring",
     img: Spring,
+    position: 5,
   },
   {
     Icon: BiLogoTailwindCss,
     name: "Tailwind CSS",
     img: Tailwind,
+    position: 6,
   },
   {
     Icon: SiPhp,
     name: "PHP",
     img: PHP,
+    position: 7,
   },
   {
     Icon: SiMysql,
     name: "MySQL",
     img: MySQL,
+    position: 8,
   },
   {
     Icon: BsFillBootstrapFill,
     name: "Bootstrap",
     img: Bootstrap,
+    position: 9,
   },
   {
     Icon: BsGit,
     name: "Git",
     img: GitLogo,
+    position: 10,
   },
   {
     Icon: AiFillGithub,
     name: "Github",
     img: Github,
+    position: 11,
   },
   {
     Icon: AiFillApi,
     name: "REST API",
     img: RestAPI,
+    position: 12,
   },
   {
     Icon: BiLogoFigma,
     name: "Figma",
     img: Figma,
+    position: 13,
   },
 
   {
     Icon: SiCsharp,
     name: "C#",
     img: Csharp,
+    position: 14,
   },
 ];

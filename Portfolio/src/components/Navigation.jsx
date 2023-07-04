@@ -8,6 +8,7 @@ import { FiSun } from "react-icons/fi";
 import { MdOutlineDarkMode } from "react-icons/md";
 
 import MobileMenu from "./MobileMenu";
+import { motion } from "framer-motion";
 
 const MenuToggle = styled.div`
   display: block;
@@ -129,7 +130,10 @@ const Navigation = () => {
       </div>
 
       <div className=" hidden smLaptop:block">
-        <ul
+        <motion.ul
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
           className={`flex space-x-16  ${
             isActive ? "text-[#999999]" : "text-[#818384]"
           } text-sm items-center  font-montserrat font-semibold `}
@@ -169,7 +173,7 @@ const Navigation = () => {
               />{" "}
             </li>
           )}
-        </ul>
+        </motion.ul>
       </div>
 
       <div className="smLaptop:hidden">

@@ -4,7 +4,7 @@ import {
   textColorPrimaryFunction,
   textColorSecondaryFunction,
 } from "@/utils/utils";
-
+import { motion } from "framer-motion";
 import { technologies } from "@/constants";
 
 const Skills = () => {
@@ -12,7 +12,11 @@ const Skills = () => {
 
   return (
     <section className="mt-24 smLaptop:w-10/12 ease-in-out " id="skills">
-      <h2
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
         className={`${textColorPrimaryFunction(
           isActive
         )} text-3xl font-bold font-montserrat md:text-4xl smLaptop:text-center smLaptop:text-5xl`}
@@ -21,12 +25,16 @@ const Skills = () => {
         <span className="block smLaptop:inline-block smLaptop:ml-3 ">
           Technologies
         </span>
-      </h2>
+      </motion.h2>
 
       <div className="smLaptop:w-full  smLaptop:flex smLaptop: justify-center">
         <div className="flex flex-wrap items-center justify-center  gap-5  mt-10 smLaptop:mt-12  smLaptop:max-w-xl mdDesktop:max-w-2xl">
-          {technologies.map(({ Icon, name, img }) => (
-            <div
+          {technologies.map(({ Icon, name, img, position }) => (
+            <motion.div
+              initial={{ y: 25, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 + position * 0.15 }}
+              viewport={{ once: true }}
               className={`group rounded  ${
                 isActive
                   ? "border-2 border-[#1B3B41] shadow-md bg-[#1B3B41]"
@@ -49,7 +57,7 @@ const Skills = () => {
 
                 <span className="mt-1">{name}</span>
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
