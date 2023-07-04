@@ -42,7 +42,7 @@ const Projects = () => {
             key={index}
           >
             <motion.div
-              initial={{ x: index == 1 || index == 3 ? 100 : -100, opacity: 0 }}
+              initial={{ x: index == 1 || index == 3 ? 50 : -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
               viewport={{ once: true }}
@@ -90,7 +90,7 @@ const Projects = () => {
             </motion.div>
 
             <motion.div
-              initial={{ x: index == 1 || index == 3 ? -100 : 100, opacity: 0 }}
+              initial={{ x: index == 1 || index == 3 ? -50 : 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
               viewport={{ once: true }}

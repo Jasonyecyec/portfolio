@@ -77,7 +77,7 @@ const About = () => {
           <motion.p
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
           >
             In my spare time, I enjoy playing games, watching movies, hanging
