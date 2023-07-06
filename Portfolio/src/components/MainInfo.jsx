@@ -9,8 +9,10 @@ import { motion } from "framer-motion";
 
 import styled from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { BsArrowRight } from "react-icons/bs";
 import MainSocials from "./MainSocials";
 import { Link } from "react-scroll";
+import Resume from "@/assets/jasonyecyec_resume.pdf";
 
 const CTAButton = styled.button`
   position: relative;
@@ -144,7 +146,9 @@ const MainInfo = () => {
           className="flex mt-10 space-x-7"
         >
           <CTAButton isActive={isActive}>
-            <span className={` font-montserrat font-semibold`}>
+            <span
+              className={` font-montserrat font-semibold flex items-center  space-x-5`}
+            >
               <Link
                 to="about"
                 spy={true}
@@ -154,11 +158,23 @@ const MainInfo = () => {
               >
                 About me
               </Link>
+              <BsArrowRight className="text-white" />
             </span>
           </CTAButton>
 
           <CTAButton isActive={isActive}>
-            <span className={`font-montserrat font-semibold`}>Resume</span>
+            <span
+              className={`font-montserrat font-semibold flex items-center  space-x-5`}
+            >
+              <a href={Resume} target="_thapa">
+                Resume
+              </a>
+              <BsArrowRight
+                className={`${textColorSecondaryFunction(
+                  isActive
+                )} text-red-400`}
+              />
+            </span>
           </CTAButton>
         </motion.div>
       </div>
