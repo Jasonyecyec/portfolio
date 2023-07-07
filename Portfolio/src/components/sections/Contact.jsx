@@ -1,12 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useToggleMode } from "@/store.js";
 import {
   textColorPrimaryFunction,
   textColorSecondaryFunction,
 } from "@/utils/utils";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import styled from "styled-components";
+
+const ProgressBar = styled.div`
+  .Toastify__progress-bar {
+    background-color: ${(props) => (props.isActive ? "#00D1C7" : "#646AFF")}};
+  }
+`;
 
 const Contact = () => {
+  const notify = () =>
+    toast.success("Message sent!", {
+      position: "top-center",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
   const { isActive } = useToggleMode();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if ([name, email, message].includes("")) return;
+      const result = await axios.post("https://jasonyecyec.vercel.app/send", {
+        name,
+        email,
+        message,
+      });
+
+      if (result.status === 200) {
+        notify();
+      }
+    } catch (error) {
+      console.log(error.message);
+      alert("Error", error.message);
+    }
+  };
 
   return (
     <section
@@ -28,12 +73,13 @@ const Contact = () => {
       </div>
 
       <div className="mt-10">
-        <form action="">
+        <form action="#">
           <div className="flex flex-col space-y-5 items-start text-base ">
             <input
               type="text"
               className="w-8/12 rounded p-1.5 outline-none font-lato border-2 "
               placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
               required
             />
             <input
@@ -41,6 +87,7 @@ const Contact = () => {
               className="w-8/12 rounded p-1.5 outline-none font-lato border-2 "
               placeholder="Email"
               required
+              onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
               name=""
@@ -50,8 +97,10 @@ const Contact = () => {
               className="w-full rounded-md p-1.5 outline-none font-lato border-2 "
               placeholder="Message"
               required
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <button
+              onClick={handleSubmit}
               className={`${textColorPrimaryFunction(isActive)} ${
                 isActive ? "border-darkPrimary" : "border-whitePrimay"
               }  border-2 rounded-md px-2.5 py-1.5 font-montserrat ${
@@ -63,6 +112,21 @@ const Contact = () => {
           </div>
         </form>
       </div>
+
+      <ProgressBar isActive={isActive}>
+        <ToastContainer
+          position="top-center"
+          autoClose={2500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </ProgressBar>
     </section>
   );
 };
