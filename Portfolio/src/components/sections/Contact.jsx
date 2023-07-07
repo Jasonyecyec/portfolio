@@ -86,6 +86,7 @@ const Contact = () => {
               className="w-8/12 rounded p-1.5 outline-none font-lato border-2 "
               placeholder="Name"
               onChange={(e) => setName(e.target.value)}
+              value={name}
               required
             />
             <input
@@ -93,6 +94,7 @@ const Contact = () => {
               className="w-8/12 rounded p-1.5 outline-none font-lato border-2 "
               placeholder="Email"
               required
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
@@ -103,6 +105,7 @@ const Contact = () => {
               className="w-full rounded-md p-1.5 outline-none font-lato border-2 "
               placeholder="Message"
               required
+              value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <button
