@@ -70,7 +70,7 @@ app.post("/send", async (req, res) => {
     const response = await sendEmail(req.body);
     res.send(response.message);
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(500).send(err);
   }
 });
 
