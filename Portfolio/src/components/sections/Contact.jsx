@@ -38,11 +38,14 @@ const Contact = () => {
     e.preventDefault();
     try {
       if ([name, email, message].includes("")) return;
-      const result = await axios.post("https://jasonyecyec.vercel.app/send", {
-        name,
-        email,
-        message,
-      });
+      const result = await axios.post(
+        "https://jasonyecyec.vercel.app/api/sendEmail",
+        {
+          name,
+          email,
+          message,
+        }
+      );
 
       if (result.status === 200) {
         notify();
