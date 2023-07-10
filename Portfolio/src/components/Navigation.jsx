@@ -119,14 +119,13 @@ const Navigation = () => {
         isHidden ? "hidden" : ""
       } md:px-14 smLaptop:px-24 smLaptop:py-8 mdDesktop:px-40 lgDesktop:px-64 `}
     >
-      <div>
-        <p
-          className={`${
-            isActive ? "text-darkPrimary" : "text-whitePrimay"
-          } text-3xl font-extrabold font-lato ease-in-out	duration-300`}
-        >
-          J<span className="pr-[20px] ">Y</span>
-        </p>
+      <div
+        className={`${
+          isActive ? "text-darkPrimary" : "text-whitePrimay"
+        } text-3xl font-extrabold font-lato ease-in-out	duration-300 flex space-x-0 md:text-4xl`}
+      >
+        <p>J</p>
+        <p>Y</p>
       </div>
 
       <div className=" hidden smLaptop:block">

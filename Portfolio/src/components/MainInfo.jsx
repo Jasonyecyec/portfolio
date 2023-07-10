@@ -120,7 +120,7 @@ const MainInfo = () => {
             transition={{ duration: 0.5, delay: 0.7 }}
             className={`${textColorSecondaryFunction(
               isActive
-            )} text-xl smLaptop:text-2xl`}
+            )} text-xl smLaptop:text-2xl md:font-medium`}
           >
             An aspiring <span className="font-bold"> Software Engineer</span>
           </motion.p>

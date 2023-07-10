@@ -20,7 +20,7 @@ const Footer = () => {
                 <Icon
                   className={`text-2xl smLaptop:text-3xl ${
                     isActive ? "text-[#A1A3A4]" : "text-[#818384]"
-                  }`}
+                  } hover:text-[#505151] ease-in-out duration-300 `}
                 />
               </a>
             </li>

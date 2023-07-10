@@ -8,6 +8,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const ProgressBar = styled.div`
   .Toastify__progress-bar {
@@ -65,20 +66,36 @@ const Contact = () => {
       id="contact"
     >
       <div className="md:mt-20 space-y-2 md:space-y-3 smLaptop:space-y-6 mdDesktop:space-y-8">
-        <h2
+        <motion.h2
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className={`${textColorPrimaryFunction(
             isActive
           )} text-3xl font-bold font-montserrat  smLaptop:text-5xl`}
         >
           Let's get in touch
-        </h2>
-        <p className={`${textColorSecondaryFunction(isActive)}  md:w-11/12`}>
+        </motion.h2>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className={`${textColorSecondaryFunction(isActive)}  md:w-11/12`}
+        >
           Do you fancy saying hi to me or you want to get started with your
           project and you need my help? Feel free to contact me.
-        </p>
+        </motion.p>
       </div>
 
-      <div className="mt-10">
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="mt-10"
+      >
         <form action="#">
           <div className="flex flex-col space-y-5 items-start text-base ">
             <input
@@ -120,7 +137,7 @@ const Contact = () => {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
 
       <ProgressBar isActive={isActive}>
         <ToastContainer

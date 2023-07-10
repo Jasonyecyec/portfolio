@@ -33,7 +33,7 @@ const Skills = () => {
             <motion.div
               initial={{ y: 25, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 + position * 0.15 }}
+              transition={{ duration: 0.5, delay: position * 0.15 }}
               viewport={{ once: true }}
               className={`group rounded  ${
                 isActive

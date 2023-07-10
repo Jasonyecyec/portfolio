@@ -92,7 +92,7 @@ const Projects = () => {
             <motion.div
               initial={{ x: index == 1 || index == 3 ? -50 : 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
               className="h-44 w-full rounded-md flex items-center md:justify-center smLaptop:justify-start  md:w-1/2 smLaptop:h-60 mdDesktop:h-64 "
             >

@@ -1,37 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { FiSun } from "react-icons/fi";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { useToggleMode } from "@/store.js";
-
-const Menu = styled.ul`
-  position: absolute;
-  top: 4rem;
-  background-color: ${({ isActive }) => (isActive ? "#1B3B41" : "#E6E6E6")};
-  color: ${({ isActive }) => (isActive ? "#B7B4B4" : "#121212")};
-  transform: ${({ isShow }) => (isShow ? "" : "translateY(-120%)")};
-  opacity: ${({ isShow }) => (isShow ? "1" : "0")};
-  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out;
-  list-style-type: none;
-  margin: 0;
-  border-radius: 0.25rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-`;
+import { animate, motion } from "framer-motion";
 
 const MobileMenu = ({ isActive, isShow, toggleActive, navigation }) => {
   const { toggleShow } = useToggleMode();
+  const [initialPosition, setInitialPosition] = useState({ y: 0 });
+  const [targetPosition, setTargetPosition] = useState({ y: -350 });
+
+  useEffect(() => {
+    setInitialPosition({ y: isShow ? -350 : 0 });
+    setTargetPosition({ y: isShow ? 0 : -350 });
+  }, [isShow]);
 
   return (
     <>
-      <Menu
+      <motion.ul
         id="menu"
-        isActive={isActive}
-        isShow={isShow}
-        className="flex flex-col items-center space-y-5 p-5  z-10 w-[87%] smLaptop:hidden "
+        animate={targetPosition}
+        initial={initialPosition}
+        transition={{ duration: 0.25 }}
+        className={`flex flex-col items-center space-y-5 p-5 drop-shadow-md z-10 w-[87%] top-[4rem] font-semibold absolute 
+        text-base font-montserrat rounded ${
+          isActive
+            ? "bg-[#1B3B41] text-[#B7B4B4]"
+            : "bg-[#E6E6E6] text-[##121212]"
+        }
+         smLaptop:hidden`}
       >
         {isActive ? (
           <FiSun
@@ -61,7 +59,7 @@ const MobileMenu = ({ isActive, isShow, toggleActive, navigation }) => {
             <li>{item.name}</li>
           </Link>
         ))}
-      </Menu>
+      </motion.ul>
     </>
   );
 };
