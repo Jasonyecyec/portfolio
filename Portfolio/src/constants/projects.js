@@ -5,7 +5,7 @@ import Patient from "@/assets/patient.jpg";
 export const projects = [
   {
     name: "OtakuFlix",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    info: "OtakuFlix is the perfect online platform for all anime lovers! Stream your favorite anime, read manga and manhwa, and enjoy an unforgettable otaku experience.",
     projectImage: "",
     technologies: [
       "Java",
@@ -19,13 +19,13 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/Jasonyecyec/OtakuFlix",
-      url: "",
+      url: "https://otaku-flix.vercel.app/",
     },
     view: "",
   },
   {
     name: "HR Management System",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    info: "A system designed to streamline and automate various human resource processes",
     projectImage: "",
     technologies: ["Bootstrap", "Jquery", "PHP", "MySQL", "Javascript"],
     links: {

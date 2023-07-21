@@ -50,6 +50,7 @@ const Contact = () => {
 
       if (result.status === 200) {
         notify();
+
         setName("");
         setEmail("");
         setMessage("");

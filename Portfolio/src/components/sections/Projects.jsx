@@ -85,7 +85,12 @@ const Projects = () => {
                 )}
               </div>
 
-              <p>{item.info}</p>
+              <p>
+                {item.info}
+                <span className="ml-1 font-semibold">
+                  {item.name == "OtakuFlix" && "(Under development 🔧)"}
+                </span>
+              </p>
               <TechStacks list={item.technologies} isActive={isActive} />
             </motion.div>
 
