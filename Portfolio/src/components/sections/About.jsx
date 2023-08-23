@@ -6,7 +6,7 @@ import {
 } from "@/utils/utils";
 import { motion } from "framer-motion";
 
-import AboutImg from "@/assets/about.jpg";
+import AboutImg from "@/assets/about_img.jpg";
 
 const About = () => {
   const { isActive } = useToggleMode();
