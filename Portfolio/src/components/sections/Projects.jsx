@@ -16,7 +16,7 @@ const Projects = () => {
   const { isActive } = useToggleMode();
   return (
     <section
-      className="mt-24 smLaptop:w-10/12 mdDesktop:max-w-6xl "
+      className="mt-24 smLaptop:w-10/12 smLaptop:mt-[5rem] mdDesktop:max-w-6xl "
       id="projects"
     >
       <motion.h2

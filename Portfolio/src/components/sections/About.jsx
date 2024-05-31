@@ -5,15 +5,22 @@ import {
   textColorSecondaryFunction,
 } from "@/utils/utils";
 import { motion } from "framer-motion";
+import { CaretRight } from "phosphor-react";
 
-import AboutImg from "@/assets/about_img.jpg";
+import GradPic from "@/assets/grad_pic.jpg";
 
 const About = () => {
   const { isActive } = useToggleMode();
 
+  // const carretColor = () => {
+  //   return isActive ? "text-darkPrimary " : "text-whitePrimay ";
+  // };
+
+  const carretColor = isActive ? "text-darkPrimary " : "text-whitePrimay ";
+
   return (
     <section
-      className="mt-44  smLaptop:w-10/12 smLaptop:mt-72 mdDesktop:max-w-6xl  "
+      className="mt-12  smLaptop:w-10/12 smLaptop:mt-72 mdDesktop:max-w-6xl  "
       id="about"
     >
       <motion.h2
@@ -36,7 +43,7 @@ const About = () => {
           viewport={{ once: true }}
           className={`${textColorSecondaryFunction(
             isActive
-          )} space-y-8 mt-10 smLaptop:text-lg`}
+          )} space-y-5 mt-10 smLaptop:text-lg`}
         >
           <motion.p
             initial={{ y: 50, opacity: 0 }}
@@ -44,9 +51,17 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            I am passionate about developing systems, which is why I chose
-            software engineering as my career path. Throughout my college years,
-            I have dedicated myself to honing my{" "}
+            A dedicated full-stack developer from the Philippines with expertise
+            in <span className="font-semibold"> React JS </span> and{" "}
+            <span className="font-semibold"> Laravel </span> . I have a proven
+            ability to lead development projects and collaborate effectively
+            within a team. Eager to contribute and grow in a dynamic
+            environment, I am continuously learning and mastering new
+            technologies.
+            {/* I am passionate about
+            developing systems, which is why I chose software engineering as my
+            career path. Throughout my college years, I have dedicated myself to
+            honing my{" "}
             <span className="font-semibold"> problem-solving skills </span> and
             acquiring a solid foundation in{" "}
             <span className="font-semibold"> Java </span>through platforms like
@@ -56,7 +71,7 @@ const About = () => {
               {" "}
               watching online courses
             </span> and{" "}
-            <span className="font-semibold">building projects </span> .
+            <span className="font-semibold">building projects </span> . */}
           </motion.p>
 
           <motion.p
@@ -65,25 +80,74 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            Currently, I am a fourth-year college student studying Information
-            Technology. My main focus is to master{" "}
-            <span className="font-semibold"> React.js </span> and the{" "}
-            <span className="font-semibold"> Spring Boot </span> framework while
-            creating personal projects. I am open to learning other web
-            technologies and eagerly looking forward to exploring mobile
-            development.
+            Here are a few technologies I’ve been learning with recently:
           </motion.p>
 
-          <motion.p
+          <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
+            className=""
           >
-            In my spare time, I enjoy playing games, watching movies, hanging
-            out with loved ones (including my dogs), and occasionally reading
-            books.
-          </motion.p>
+            <ul className="w-full grid grid-cols-2 text-base font-semibold gap-2">
+              <li className="flex items-center space-x-2">
+                <span>
+                  {" "}
+                  <CaretRight
+                    size={15}
+                    weight="fill"
+                    className={`${carretColor}`}
+                  />{" "}
+                </span>{" "}
+                <span> Docker</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  {" "}
+                  <CaretRight
+                    size={15}
+                    weight="fill"
+                    className={`${carretColor}`}
+                  />{" "}
+                </span>{" "}
+                <span> Next JS</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  {" "}
+                  <CaretRight
+                    size={15}
+                    weight="fill"
+                    className={`${carretColor}`}
+                  />{" "}
+                </span>{" "}
+                <span> AWS</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  {" "}
+                  <CaretRight
+                    size={15}
+                    weight="fill"
+                    className={`${carretColor}`}
+                  />{" "}
+                </span>{" "}
+                <span> React Native/Expo</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  {" "}
+                  <CaretRight
+                    size={15}
+                    weight="fill"
+                    className={`${carretColor}`}
+                  />{" "}
+                </span>{" "}
+                <span> Typescript</span>
+              </li>
+            </ul>
+          </motion.div>
         </motion.div>
 
         <div className="flex justify-center items-center mt-16   smLaptop:mt-0">
@@ -105,9 +169,9 @@ const About = () => {
               }`}
             ></span>
             <img
-              src={AboutImg}
+              src={GradPic}
               alt=""
-              className="object-cover h-80 smLaptop:h-[21rem] grayscale w-full mdDesktop:h-96	hover:grayscale-0 ease-in-out duration-300"
+              className="object-cover object-top	 h-80 smLaptop:h-[21rem] grayscale w-full mdDesktop:h-96	hover:grayscale-0 ease-in-out duration-300"
             />
           </motion.div>
         </div>

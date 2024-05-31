@@ -11,7 +11,10 @@ const Skills = () => {
   const { isActive } = useToggleMode();
 
   return (
-    <section className="mt-24 smLaptop:w-10/12 ease-in-out " id="skills">
+    <section
+      className="mt-24 smLaptop:w-10/12 smLaptop:mt-[10rem] ease-in-out "
+      id="skills"
+    >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

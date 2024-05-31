@@ -12,14 +12,18 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 import MainSocials from "./MainSocials";
 import { Link } from "react-scroll";
-import Resume from "@/assets/myResume.pdf";
+import Resume from "@/assets/jasonyecyec_resume_full_stack_no_number.pdf";
+import "../styles/main-info-style.css";
 
 const CTAButton = styled.button`
   position: relative;
   padding: 12px 18px;
+  width: 10rem;
+  text-align: center;
   transition: all 0.2s ease;
   border: none;
-  background: none;
+  border-radius: 8px;
+  background: ${(props) => (props.isActive ? "#00D1C7" : "#646AFF")};
   color: ${(props) => (props.isActive ? "#FFFFFF" : "#121212")};
 
   &::before {
@@ -28,9 +32,11 @@ const CTAButton = styled.button`
     top: 0;
     left: 0;
     display: block;
-    border-radius: 50px;
-    background: ${(props) => (props.isActive ? "#00D1C7" : "#646AFF")};
-    width: 45px;
+    border-radius: 8px;
+    background: white;
+    border: ${(props) => (props.isActive ? "#00D1C7" : "#646AFF")};
+    width: 100%;
+    text-align: center;
     height: 45px;
     transition: all 0.3s ease;
   }
@@ -57,6 +63,8 @@ const CTAButton = styled.button`
   }
   &:hover::before {
     width: 100%;
+    top: -5px;
+    left: -5px;
     background: ${(props) => (props.isActive ? "#00D1C7" : "#646AFF")};
   }
 
@@ -80,9 +88,19 @@ const MainInfo = () => {
     return isActive ? "text-darkPrimary" : "text-whitePrimay";
   };
 
+  const bgColorClassPrimary = () => {
+    return isActive ? "bg-[#00D1C7]" : "bg-whitePrimay";
+  };
+
+  const buttonStyle = () => {
+    return isActive
+      ? "text-darkPrimary border-darkPrimary bg-dark"
+      : "text-whitePrimay border-whitePrimay bg-white";
+  };
+
   return (
     <section
-      className="md:grid grid-cols-2 mt-24  smLaptop:w-10/12 smLaptop:mt-28 smLaptop:gap-x-14 mdDesktop:max-w-6xl mdDesktop:mt-36
+      className="md:grid  grid-cols-2 hero-section-height mt-24 smLaptop:w-10/12 smLaptop:mt-28 smLaptop:gap-x-14 mdDesktop:max-w-6xl mdDesktop:mt-36
      lgDesktop:mt-48"
     >
       <Navigation />
@@ -145,37 +163,36 @@ const MainInfo = () => {
           transition={{ duration: 0.5, delay: 1.1 }}
           className="flex mt-10 space-x-7"
         >
-          <CTAButton isActive={isActive}>
-            <span
-              className={` font-montserrat font-semibold flex items-center  space-x-5`}
+          <div
+            className={`${bgColorClassPrimary()} bg-red-200 h-12 rounded w-44 text-center relative group `}
+          >
+            <Link
+              to="about"
+              className="text-center"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
             >
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
+              <button
+                className={`${buttonStyle()}  border border w-full h-12 font-semibold rounded absolute top-0 left-0 group-hover:top-[-4px] group-hover:left-[-4px] ease-in-out duration-200`}
               >
-                About me
-              </Link>
-              <BsArrowRight className="text-white" />
-            </span>
-          </CTAButton>
+                About Me{" "}
+              </button>
+            </Link>
+          </div>
 
-          <CTAButton isActive={isActive}>
-            <span
-              className={`font-montserrat font-semibold flex items-center  space-x-5`}
-            >
-              <a href={Resume} target="_thapa">
-                Resume
-              </a>
-              <BsArrowRight
-                className={`${textColorSecondaryFunction(
-                  isActive
-                )} text-red-400`}
-              />
-            </span>
-          </CTAButton>
+          <div
+            className={`${bgColorClassPrimary()} bg-red-200 h-12 rounded w-44 text-center relative group`}
+          >
+            <a href={Resume} target="_thapa">
+              <button
+                className={`${buttonStyle()}  border border w-full h-12 font-semibold rounded absolute top-0 left-0 group-hover:top-[-4px] group-hover:left-[-4px] ease-in-out duration-200`}
+              >
+                Resume{" "}
+              </button>
+            </a>
+          </div>
         </motion.div>
       </div>
 

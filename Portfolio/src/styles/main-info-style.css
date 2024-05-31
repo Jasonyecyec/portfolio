@@ -1,0 +1,9 @@
+.hero-section-height {
+  height: calc(100vh - 100px);
+}
+
+@media (min-width: 770px) {
+  .hero-section-height {
+    height: calc(100vh - 350px);
+  }
+}

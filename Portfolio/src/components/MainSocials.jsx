@@ -26,8 +26,8 @@ const MainSocials = () => {
   };
 
   return (
-    <div className="flex justify-center ">
-      <ul className="flex  justify-between w-9/12 mt-24  md:relative md:w-full smLaptop:mt-0 ">
+    <div className="flex justify-center">
+      <ul className="flex justify-between w-9/12 mt-24 md:relative md:w-full smLaptop:mt-0 ">
         {socials.map(({ url, Icon, position }) => (
           <motion.li
             initial={{ opacity: 0, translateY: 50 }}
@@ -41,6 +41,15 @@ const MainSocials = () => {
           >
             <a href={url}>
               <motion.button
+                animate={{
+                  translateY: ["0%", "-20%", "0%"],
+                }}
+                transition={{
+                  duration: 4,
+                  delay: 1.1 + position * 0.3,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
                 whileHover={{ scale: 1.1 }}
                 className={`rounded-full ${
                   isActive ? "bg-[#1B3B41]" : "bg-[#BBBEFF]"
