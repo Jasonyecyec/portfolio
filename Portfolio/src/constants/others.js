@@ -8,11 +8,17 @@ import { SiSpringboot, SiSpring } from "react-icons/si";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { SiPhp } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
+import { SiPostman } from "react-icons/si";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { BsGit } from "react-icons/bs";
 import { AiFillApi } from "react-icons/ai";
 import { BiLogoFigma } from "react-icons/bi";
 import { SiCsharp } from "react-icons/si";
+import { FaLaravel } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaDocker } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+
 import SpringBoot from "@/assets/spring_boot.png";
 import Java from "@/assets/java.png";
 import Javascript from "@/assets/javascript.png";
@@ -71,6 +77,20 @@ export const navigation = [
   },
 ];
 
+export const experience = [
+  {
+    company: "MWeeb Information Technology Inc.",
+    position: "frontend intern",
+    from: "sep 2023",
+    to: "dec 2023",
+    details: [
+      "Enhanced a web chat application with advanced group chat management and user activity features using React.",
+      "Developed a responsive landing page with React, Bootstrap, and CSS | innque.com",
+      "Assisted in creating a web application for automated contract document generation using React.",
+    ],
+  },
+];
+
 export const technologies = [
   {
     Icon: IoLogoJavascript,
@@ -79,82 +99,109 @@ export const technologies = [
     position: 1,
   },
   {
+    Icon: SiPhp,
+    name: "PHP",
+    img: PHP,
+    position: 2,
+  },
+  {
     Icon: BiLogoJava,
     name: "Java",
     img: Java,
-    position: 2,
+    position: 3,
   },
   {
     Icon: FaReact,
     name: "React.js",
     img: ReactJS,
-    position: 3,
-  },
-  {
-    Icon: SiSpringboot,
-    name: "Spring Boot",
-    img: SpringBoot,
     position: 4,
   },
+
   {
-    Icon: SiSpring,
-    name: "Spring",
-    img: Spring,
+    Icon: FaLaravel,
+    name: "Laravel",
+    img: ReactJS,
     position: 5,
+  },
+  {
+    Icon: SiNextdotjs,
+    name: "Next.js",
+    img: ReactJS,
+    position: 6,
   },
   {
     Icon: BiLogoTailwindCss,
     name: "Tailwind CSS",
     img: Tailwind,
-    position: 6,
-  },
-  {
-    Icon: SiPhp,
-    name: "PHP",
-    img: PHP,
     position: 7,
   },
+
+  {
+    Icon: SiSpringboot,
+    name: "Spring Boot",
+    img: SpringBoot,
+    position: 8,
+  },
+
   {
     Icon: SiMysql,
     name: "MySQL",
     img: MySQL,
-    position: 8,
+    position: 9,
+  },
+  {
+    Icon: BiLogoPostgresql,
+    name: "PostgreSQL",
+    img: MySQL,
+    position: 10,
+  },
+  {
+    Icon: FaDocker,
+    name: "Docker",
+    img: MySQL,
+    position: 11,
   },
   {
     Icon: BsFillBootstrapFill,
     name: "Bootstrap",
     img: Bootstrap,
-    position: 9,
+    position: 12,
   },
   {
     Icon: BsGit,
     name: "Git",
     img: GitLogo,
-    position: 10,
+    position: 13,
   },
   {
     Icon: AiFillGithub,
     name: "Github",
     img: Github,
-    position: 11,
+    position: 14,
+  },
+  {
+    Icon: SiPostman,
+    name: "Postman",
+    img: Github,
+    position: 15,
   },
   {
     Icon: AiFillApi,
     name: "REST API",
     img: RestAPI,
-    position: 12,
+    position: 16,
   },
   {
     Icon: BiLogoFigma,
     name: "Figma",
     img: Figma,
-    position: 13,
+    position: 17,
   },
 
   {
     Icon: SiCsharp,
     name: "C#",
     img: Csharp,
-    position: 14,
+    position: 18,
   },
 ];

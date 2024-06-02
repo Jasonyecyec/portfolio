@@ -22,7 +22,7 @@ const Skills = () => {
         viewport={{ once: true }}
         className={`${textColorPrimaryFunction(
           isActive
-        )} text-3xl font-bold font-montserrat md:text-4xl smLaptop:text-center smLaptop:text-5xl`}
+        )} text-3xl font-bold font-montserrat md:text-4xl smLaptop:text-center smLaptop:text-5xl `}
       >
         Skills <span className="text-[#A1A3A4]">&</span>
         <span className="block smLaptop:inline-block smLaptop:ml-3 ">
@@ -31,18 +31,18 @@ const Skills = () => {
       </motion.h2>
 
       <div className="smLaptop:w-full  smLaptop:flex smLaptop: justify-center">
-        <div className="flex flex-wrap items-center justify-center  gap-5  mt-10 smLaptop:mt-12  smLaptop:max-w-xl mdDesktop:max-w-2xl">
+        <div className="flex flex-wrap items-center justify-center gap-5  mt-10 smLaptop:mt-12  smLaptop:max-w-3xl mdDesktop:max-w-2xl">
           {technologies.map(({ Icon, name, img, position }) => (
             <motion.div
-              initial={{ y: 25, opacity: 0 }}
+              initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: position * 0.15 }}
               viewport={{ once: true }}
               className={`group rounded  ${
                 isActive
-                  ? "border-2 border-[#1B3B41] shadow-md bg-[#1B3B41]"
-                  : "shadow-md"
-              } p-2  hover:border-darkPrimary  duration-300 min-w-[5rem]`}
+                  ? "border-2 border-[#1B3B41] shadow bg-[#1B3B41]"
+                  : "hover:border-darkPrimary  shadow border"
+              } p-2  hover:border-whitePrimay border  duration-150 min-w-[5rem] cursor-pointer  ease-linear`}
               key={name}
             >
               <p
@@ -55,7 +55,10 @@ const Skills = () => {
                     className={`text-white text-2xl group-hover:text-darkPrimary`}
                   />
                 ) : (
-                  <img src={img} alt="" className="text-2xl " />
+                  // <img src={img} alt="" className="text-2xl " />
+                  <Icon
+                    className={`text-whiteSecondary text-2xl group-hover:text-whitePrimay`}
+                  />
                 )}
 
                 <span className="mt-1">{name}</span>

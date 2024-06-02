@@ -58,20 +58,6 @@ const About = () => {
             within a team. Eager to contribute and grow in a dynamic
             environment, I am continuously learning and mastering new
             technologies.
-            {/* I am passionate about
-            developing systems, which is why I chose software engineering as my
-            career path. Throughout my college years, I have dedicated myself to
-            honing my{" "}
-            <span className="font-semibold"> problem-solving skills </span> and
-            acquiring a solid foundation in{" "}
-            <span className="font-semibold"> Java </span>through platforms like
-            mooc.fi. Simultaneously, I have been mastering front-end development
-            by
-            <span className="font-semibold">
-              {" "}
-              watching online courses
-            </span> and{" "}
-            <span className="font-semibold">building projects </span> . */}
           </motion.p>
 
           <motion.p
@@ -111,7 +97,7 @@ const About = () => {
                     className={`${carretColor}`}
                   />{" "}
                 </span>{" "}
-                <span> Next JS</span>
+                <span> Next.js</span>
               </li>
               <li className="flex items-center space-x-2">
                 <span>

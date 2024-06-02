@@ -117,7 +117,7 @@ const Navigation = () => {
         isActive ? "bg-dark" : "bg-white"
       } z-10 ease-in-out duration-150 ${
         isHidden ? "top-[-100px]" : ""
-      } md:px-14 smLaptop:px-24 smLaptop:py-8 mdDesktop:px-40 lgDesktop:px-64 h-[100px]`}
+      } md:px-14 smLaptop:px-24 smLaptop:py-8 mdDesktop:px-40 lgDesktop:px-64 h-[80px] `}
     >
       <div
         className={`${

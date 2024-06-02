@@ -9,6 +9,7 @@ import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "./components/Footer";
+import Experience from "./components/sections/Experience";
 
 function App() {
   const { isActive } = useToggleMode();
@@ -22,6 +23,7 @@ function App() {
       <MainInfo />
       <About />
       <Skills />
+      <Experience />
       <Projects />
       <Contact />
       <Footer />

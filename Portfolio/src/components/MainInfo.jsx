@@ -89,7 +89,7 @@ const MainInfo = () => {
   };
 
   const bgColorClassPrimary = () => {
-    return isActive ? "bg-[#00D1C7]" : "bg-whitePrimay";
+    return isActive ? "bg-darkPrimary" : "bg-whitePrimay";
   };
 
   const buttonStyle = () => {

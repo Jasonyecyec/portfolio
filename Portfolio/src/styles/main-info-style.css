@@ -4,6 +4,6 @@
 
 @media (min-width: 770px) {
   .hero-section-height {
-    height: calc(100vh - 350px);
+    height: calc(100vh - 300px);
   }
 }
