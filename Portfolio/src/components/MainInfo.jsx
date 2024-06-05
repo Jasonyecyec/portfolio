@@ -81,7 +81,7 @@ const CTAButton = styled.button`
   }
 `;
 
-const MainInfo = () => {
+const MainInfo = ({ viewObserver }) => {
   const { isActive } = useToggleMode();
 
   const textColorClassPrimary = () => {
@@ -100,6 +100,7 @@ const MainInfo = () => {
 
   return (
     <section
+      ref={viewObserver}
       className="md:grid  grid-cols-2 hero-section-height mt-24 smLaptop:w-10/12 smLaptop:mt-28 smLaptop:gap-x-14 mdDesktop:max-w-6xl mdDesktop:mt-36
      lgDesktop:mt-48"
     >

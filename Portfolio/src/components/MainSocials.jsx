@@ -39,7 +39,10 @@ const MainSocials = () => {
             key={url}
             className={`md:absolute  ${getPositionClass(position)}`}
           >
-            <a href={url}>
+            <a
+              href={position === 3 ? "mailto:jason.yecyec023@gmail.com" : url}
+              target="_thapa"
+            >
               <motion.button
                 animate={{
                   translateY: ["0%", "-20%", "0%"],

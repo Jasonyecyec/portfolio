@@ -4,6 +4,18 @@ import Patient from "@/assets/patient.jpg";
 
 export const projects = [
   {
+    name: "QCU-FMS",
+    info: "A comprehensive system designed to optimize issue reporting, event requests, and service management for Quezon City University. ",
+    projectImage: "",
+    technologies: ["React.js", "Laravel", "Tailwind CSS", "MySQL", "Open AI"],
+    links: {
+      github: "https://github.com/Jasonyecyec/OtakuFlix",
+      url: "https://otaku-flix.vercel.app/",
+    },
+    view: "",
+  },
+
+  {
     name: "OtakuFlix",
     info: "OtakuFlix is the perfect online platform for all anime lovers! Stream your favorite anime, read manga and manhwa, and enjoy an unforgettable otaku experience.",
     projectImage: "",

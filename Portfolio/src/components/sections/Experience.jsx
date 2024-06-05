@@ -49,7 +49,7 @@ const Experience = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
-            className={`block w-full ${containerStyle} md:flex md:space-x-3 group rounded-lg  p-5 ease-linear duration-50`}
+            className={`block w-full ${containerStyle} md:flex md:space-x-3 group rounded-lg  p-5 ease-linear duration-100`}
             key={index}
           >
             <div className="w-full md:w-52">

@@ -117,7 +117,7 @@ const Navigation = () => {
         isActive ? "bg-dark" : "bg-white"
       } z-10 ease-in-out duration-150 ${
         isHidden ? "top-[-100px]" : ""
-      } md:px-14 smLaptop:px-24 smLaptop:py-8 mdDesktop:px-40 lgDesktop:px-64 h-[80px] `}
+      } md:px-14 smLaptop:px-16 smLaptop:py-8 mdDesktop:px-40 lgDesktop:px-64 h-[80px] `}
     >
       <div
         className={`${
@@ -128,7 +128,7 @@ const Navigation = () => {
         <p>Y</p>
       </div>
 
-      <div className=" hidden smLaptop:block">
+      <div className=" hidden lg:block">
         <motion.ul
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -175,7 +175,7 @@ const Navigation = () => {
         </motion.ul>
       </div>
 
-      <div className="smLaptop:hidden">
+      <div className="lg:hidden">
         <MenuToggle id="menuToggle" onClick={toggleShow}>
           <MenuInput type="checkbox" isActive={isActive} ref={menuToggle} />
 
