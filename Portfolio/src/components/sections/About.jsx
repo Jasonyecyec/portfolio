@@ -157,7 +157,7 @@ const About = () => {
             <img
               src={GradPic}
               alt=""
-              className="object-cover object-top	 h-80 smLaptop:h-[21rem] grayscale w-full mdDesktop:h-96	hover:grayscale-0 ease-in-out duration-300"
+              className="object-cover object-top	 h-80 smLaptop:h-[21rem]  grayscale w-full mdDesktop:h-96	hover:grayscale-0 ease-in-out duration-300"
             />
           </motion.div>
         </div>

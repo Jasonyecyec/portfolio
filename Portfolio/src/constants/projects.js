@@ -1,12 +1,13 @@
 import ReactBank from "@/assets/react_bank.png";
 import Ribrary from "@/assets/Ribrary.png";
 import Patient from "@/assets/patient.jpg";
+import QCUFMS from "@/assets/qcu-fms/preview.png";
 
 export const projects = [
   {
     name: "QCU-FMS",
     info: "A comprehensive system designed to optimize issue reporting, event requests, and service management for Quezon City University. ",
-    projectImage: "",
+    projectImage: QCUFMS,
     technologies: ["React.js", "Laravel", "Tailwind CSS", "MySQL", "Open AI"],
     links: {
       github: "https://github.com/Jasonyecyec/OtakuFlix",

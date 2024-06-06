@@ -7,8 +7,8 @@ const TechStacks = ({ list, isActive }) => {
         {list.map((item, index) => (
           <li
             className={`${
-              isActive ? "bg-[#1B3B41]" : "bg-[#BBBEFF] text-[#626262]"
-            } py-1 px-2 text-sm  rounded-full shadow-lg font-semibold`}
+              isActive ? "bg-[#1B3B41]" : " text-whitePrimay border shadow"
+            } py-1 px-2 text-sm  rounded-full  font-semibold`}
             key={index}
           >
             {item}
