@@ -139,7 +139,7 @@ const Navigation = () => {
         >
           {navigation.map((item, index) => (
             <Link
-              to={item.url}
+              to={`${item.url}`}
               spy={true}
               smooth={true}
               offset={-100}

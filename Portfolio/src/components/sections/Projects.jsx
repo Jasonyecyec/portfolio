@@ -11,9 +11,11 @@ import { projects } from "@/constants";
 import TechStacks from "@/components/TechStacks";
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Link, useNavigate } from "react-router-dom";
 
 const Projects = () => {
   const { isActive } = useToggleMode();
+  const navigate = useNavigate();
   return (
     <section
       className="mt-24 smLaptop:w-8/12 smLaptop:mt-[5rem] mdDesktop:max-w-6xl "
@@ -101,17 +103,24 @@ const Projects = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="h-44 w-full rounded-md flex items-center md:justify-center  smLaptop:justify-center  md:w-1/2 smLaptop:h-60 mdDesktop:h-64 group  relative overflow-hidden"
+              className="h-44 w-full rounded-md flex items-center md:justify-center   smLaptop:justify-center  md:w-1/2 smLaptop:h-60 mdDesktop:h-64 group  relative overflow-hidden"
             >
-              <div className="absolute left-0  top-0 group-hover:flex justify-center items-center w-full h-full cursor-pointer  group-hover:bg-[rgba(0,0,0,0.40)] rounded-md transition ease-in-out duration-300">
-                <button className="p-2 px-4 hover:shadow-md hover:translate-y-[-1.5px] text-sm rounded-full bg-whitePrimay text-white hidden group-hover:block transition ease-in-out duration-300">
-                  View details
-                </button>
-              </div>
+              {item.view !== "" && (
+                <div className="absolute left-0  top-0 group-hover:flex justify-center items-center w-full h-full cursor-pointer  group-hover:bg-[rgba(0,0,0,0.40)] rounded-md transition ease-in-out duration-300">
+                  {/* <Link to={item.view}> */}{" "}
+                  <button
+                    onClick={() => navigate(item.view)}
+                    className="p-2 px-4 hover:shadow-md hover:translate-y-[-1.5px] text-sm rounded-full bg-whitePrimay text-white hidden group-hover:block transition ease-in-out duration-300"
+                  >
+                    View details
+                  </button>
+                  {/* </Link> */}
+                </div>
+              )}
 
               <img
                 src={item.projectImage}
-                className="rounded-md h-full w-11/12 smLaptop:max-w-md   bg-slate-200  w-full"
+                className="rounded-md h-full w-11/12 smLaptop:max-w-md  bg-slate-200  w-full"
               />
             </motion.div>
           </div>

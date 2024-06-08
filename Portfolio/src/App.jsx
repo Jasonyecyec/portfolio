@@ -17,6 +17,9 @@ import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import { FiFacebook } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
+import { Routes, Route, Link } from "react-router-dom";
+import Main from "./routes/main";
+import Fms from "./routes/Fms";
 
 const SideLinks = styled(motion.div)`
   position: fixed;
@@ -85,83 +88,28 @@ function App() {
   }, [isInView]);
 
   return (
-    <main
-      // ref={mainRef}
-      className={`p-6 ${
-        isActive ? "bg-dark" : "bg-white"
-      } ease-in-out	duration-300 flex flex-col items-center md:p-14 overflow-hidden h-full relative`}
-    >
-      {" "}
-      <MainInfo viewObserver={mainRef} />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
-      <SideLinks
-        className="space-y-5 "
-        initial={{ y: 50, opacity: 0 }}
-        animate={!isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-        transition={{ duration: 0.5, delay: 0 }}
-        viewport={{ once: true }}
-        isActive={isActive}
-        position={"left"}
-        align={"4.3rem"}
-      >
-        {/* <p>asdas</p> */}
-        <button>
-          <a href="https://github.com/Jasonyecyec" target="_thapa">
-            <FiGithub className="text-xl" />
-          </a>
-        </button>
-
-        <button>
-          <a
-            href="https://www.linkedin.com/in/jason-yecyec-74545a201/"
-            target="_thapa"
-          >
-            <FiLinkedin className="text-xl" />
-          </a>
-        </button>
-        <button>
-          <a
-            href="https://www.linkedin.com/in/jason-yecyec-74545a201/"
-            target="_thapa"
-          >
-            <FiFacebook className="text-xl" />
-          </a>
-        </button>
-
-        <button>
-          <a
-            href="https://www.instagram.com/jason.yecyec?igsh=MW1scXR4bDU5cWI3YQ%3D%3D&utm_source=qr"
-            target="_thapa"
-          >
-            <FaInstagram className="text-xl" />
-          </a>
-        </button>
-      </SideLinks>
-      <SideLinks
-        className="pt-10 "
-        initial={{ y: 50, opacity: 0 }}
-        animate={!isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-        transition={{ duration: 0.5, delay: 0 }}
-        viewport={{ once: true }}
-        isActive={isActive}
-        position={"right"}
-        align={"-30px"}
-      >
-        <a
-          href="mailto:jason.yecyec023@gmail.com"
-          className={`${
-            isActive ? "hover:text-darkPrimary" : "hover:text-whitePrimay"
-          } rotate-90 text-sm  flex justify-center items-center cursor-pointer font-semibold text-gray-500 hover:translate-y-[-3px] ease-in-out duration-150`}
-        >
-          jason.yecyec023@gmail.com
-        </a>
-      </SideLinks>
-    </main>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/qcu-fms" element={<Fms />} />
+      <Route path="/hr" element={<div>qcu-fms</div>} />
+      <Route
+        path="/*"
+        element={
+          <main className="w-screen h-screen flex justify-center items-center">
+            {" "}
+            <div>
+              {" "}
+              <p className="font-bold text-[2rem] text-gray-500 capitalize md:text-[3rem] smLaptop:text-[4rem]">
+                Page not found{" "}
+              </p>
+              <p className="text-center hover:text-blue-500 font-semibold text-gray-500 ease-in-out duratin-150">
+                <Link to="/">Go back to main</Link>
+              </p>
+            </div>
+          </main>
+        }
+      />
+    </Routes>
   );
 }
 

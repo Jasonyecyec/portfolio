@@ -6,14 +6,25 @@ import QCUFMS from "@/assets/qcu-fms/preview.png";
 export const projects = [
   {
     name: "QCU-FMS",
-    info: "A comprehensive system designed to optimize issue reporting, event requests, and service management for Quezon City University. ",
+    info: "A comprehensive system designed to simplify issue reporting, event requests, and service management for Quezon City University. ",
     projectImage: QCUFMS,
     technologies: ["React.js", "Laravel", "Tailwind CSS", "MySQL", "Open AI"],
     links: {
-      github: "https://github.com/Jasonyecyec/OtakuFlix",
-      url: "https://otaku-flix.vercel.app/",
+      github: "https://github.com/Jasonyecyec/IRRIS_mobile",
+      url: "https://irris-mobile.vercel.app/",
     },
-    view: "",
+    view: "/qcu-fms",
+  },
+  {
+    name: "HR Management System",
+    info: "A system designed to streamline and automate various human resource processes",
+    projectImage: "",
+    technologies: ["Bootstrap", "Jquery", "PHP", "MySQL", "Javascript"],
+    links: {
+      github: "https://github.com/Jasonyecyec/HR_DEPT",
+      url: "",
+    },
+    view: "hr",
   },
 
   {
@@ -36,17 +47,7 @@ export const projects = [
     },
     view: "",
   },
-  {
-    name: "HR Management System",
-    info: "A system designed to streamline and automate various human resource processes",
-    projectImage: "",
-    technologies: ["Bootstrap", "Jquery", "PHP", "MySQL", "Javascript"],
-    links: {
-      github: "https://github.com/Jasonyecyec/HR_DEPT",
-      url: "",
-    },
-    view: "",
-  },
+
   {
     name: "Ribrary",
     info: "Ribray is a digital library and online social reading platform. It provides users with various copies of e-books, audiobooks, magazines, research documents, and podcasts. Users can also upload their own content and receive feedback from other users.",
