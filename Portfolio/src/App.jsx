@@ -18,7 +18,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { FiFacebook } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { Routes, Route, Link } from "react-router-dom";
-import Main from "./routes/main";
+import MainComponent from "./routes/MainComponent";
 import Fms from "./routes/Fms";
 
 const SideLinks = styled(motion.div)`
@@ -89,7 +89,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
+      <Route path="/" element={<MainComponent />} />
       <Route path="/qcu-fms" element={<Fms />} />
       <Route path="/hr" element={<div>qcu-fms</div>} />
       <Route

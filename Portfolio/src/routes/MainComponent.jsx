@@ -11,7 +11,7 @@ import Experience from "../components/sections/Experience";
 import { useInView } from "framer-motion";
 import SideLinks from "../components/SideLinks";
 
-const Main = () => {
+const MainComponent = () => {
   const { isActive } = useToggleMode();
   const mainRef = useRef(null);
   const isInView = useInView(mainRef, { margin: "0px 0px 0px 0px" });
@@ -40,4 +40,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainComponent;
