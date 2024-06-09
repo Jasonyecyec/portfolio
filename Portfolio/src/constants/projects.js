@@ -3,6 +3,18 @@ import Ribrary from "@/assets/Ribrary.png";
 import Patient from "@/assets/patient.jpg";
 import QCUFMS from "@/assets/qcu-fms/preview.png";
 
+//USER SCREENSHOT
+import StudentHome from "@/assets/qcu-fms/user/student-home.jpg";
+import AvailableFacility from "@/assets/qcu-fms/user/available-facility.jpg";
+import Login from "@/assets/qcu-fms/user/login.jpg";
+import Register from "@/assets/qcu-fms/user/register.jpg";
+import ForgotPass from "@/assets/qcu-fms/user/forgot-pass.jpg";
+import CreateAcc from "@/assets/qcu-fms/user/create-acc.jpg";
+import OTP from "@/assets/qcu-fms/user/otp.jpg";
+import Scan from "@/assets/qcu-fms/user/scan.jpg";
+import Report from "@/assets/qcu-fms/user/report.jpg";
+import SubmitReport from "@/assets/qcu-fms/user/submit-report.jpg";
+
 export const projects = [
   {
     name: "QCU-FMS",
@@ -90,3 +102,54 @@ export const projects = [
     view: "",
   },
 ];
+
+export const FMSProject = {
+  user: [
+    {
+      image: Login,
+      alt: "login",
+      description: "",
+    },
+    {
+      image: ForgotPass,
+      alt: "forgot-pass",
+      description: "",
+    },
+    {
+      image: CreateAcc,
+      alt: "create-acc",
+      description: "",
+    },
+    {
+      image: Register,
+      alt: "register",
+      description: "",
+    },
+    {
+      image: OTP,
+      alt: "otp",
+      description: "",
+    },
+    {
+      image: StudentHome,
+      alt: "student-home",
+      description: "",
+    },
+    {
+      image: Report,
+      alt: "report",
+      description: "",
+    },
+    {
+      image: SubmitReport,
+      alt: "submit-report",
+      description: "",
+    },
+    {
+      image: AvailableFacility,
+      alt: "available-facility",
+      description: "",
+    },
+  ],
+  admin: [],
+};

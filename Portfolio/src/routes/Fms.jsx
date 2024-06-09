@@ -8,6 +8,8 @@ import { textColorPrimaryFunction } from "../utils/utils";
 import { Button, ButtonGroup } from "@nextui-org/button";
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Image } from "@nextui-org/image";
+import { FMSProject } from "../constants";
+import Footer from "../components/Footer";
 
 const Fms = () => {
   const { isActive } = useToggleMode();
@@ -22,6 +24,10 @@ const Fms = () => {
     console.log("selected :", selected);
   }, [selected]);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const textPrimary = textColorPrimaryFunction();
   return (
     <main
@@ -30,7 +36,7 @@ const Fms = () => {
       } ease-in-out	duration-300 flex flex-col items-center md:p-14 overflow-hidden h-full relative`}
     >
       <Navigation />
-      <div className=" w-full  smLaptop:w-8/12 pt-20 smLaptop:pt-20">
+      <div className=" w-full  smLaptop:w-8/12 pt-20 smLaptop:pt-16">
         <div className="flex justify-start w-full ">
           <button onClick={() => navigate(-1)}>
             <FaArrowLeft />
@@ -57,16 +63,14 @@ const Fms = () => {
           </Tabs>
         </div>
 
-        <div className="grid grid-cols-2 gap-5 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10 ">
           {selected === "user" ? (
             <>
-              {" "}
-              <div className="h-[12rem]">t</div>
-              <div className="h-[12rem]">t</div>
-              <div className="h-[12rem]">t</div>
-              <div className="h-[12rem]">t</div>
-              <div className="h-[12rem]">t</div>
-              <div className="h-[12rem]">t</div>
+              {FMSProject.user.map((item, index) => (
+                <div className="shadow rounded-md" key={index}>
+                  <img alt={item.alt} src={item.image} className="rounded-md" />
+                </div>
+              ))}
             </>
           ) : (
             <>
@@ -78,7 +82,14 @@ const Fms = () => {
         </div>
       </div>
 
+      <button
+        onClick={handleScrollToTop}
+        className="fixed bottom-10  right-5 smLaptop:right-20 bg-white rounded-full shadow-xl border p-5 z-30 hover:bg-gray-50 ease-in-out duration-150"
+      >
+        Up
+      </button>
       <SideLinks isActive={isActive} isInView={false} />
+      <Footer />
     </main>
   );
 };
