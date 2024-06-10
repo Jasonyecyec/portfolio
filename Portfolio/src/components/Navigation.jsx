@@ -115,7 +115,7 @@ const Navigation = () => {
     <div
       className={` flex justify-between items-center fixed top-0 left-0 px-6 py-6 w-[100%] ${
         isActive ? "bg-dark" : "bg-white"
-      } z-10 ease-in-out duration-150 ${
+      } z-30 ease-in-out duration-150 ${
         isHidden ? "top-[-100px]" : ""
       } md:px-14 smLaptop:px-16 smLaptop:py-8 mdDesktop:px-40 lgDesktop:px-64 h-[80px] `}
     >

@@ -14,6 +14,14 @@ import OTP from "@/assets/qcu-fms/user/otp.jpg";
 import Scan from "@/assets/qcu-fms/user/scan.jpg";
 import Report from "@/assets/qcu-fms/user/report.jpg";
 import SubmitReport from "@/assets/qcu-fms/user/submit-report.jpg";
+import StudentMore from "@/assets/qcu-fms/user/student-more.jpg";
+import Rewards from "@/assets/qcu-fms/user/rewards.jpg";
+import StudentCalendar from "@/assets/qcu-fms/user/student-calendar.jpg";
+import SearchFacility from "@/assets/qcu-fms/user/search-facility.jpg";
+import RateFacility from "@/assets/qcu-fms/user/rate-facility.jpg";
+import StudentAcc from "@/assets/qcu-fms/user/student-acc.jpg";
+import EmployeeHome from "@/assets/qcu-fms/user/employee-home.jpg";
+import RequestMaintenance from "@/assets/qcu-fms/user/request-maintenance.jpg";
 
 export const projects = [
   {
@@ -146,8 +154,48 @@ export const FMSProject = {
       description: "",
     },
     {
+      image: StudentMore,
+      alt: "student-more",
+      description: "",
+    },
+    {
+      image: Rewards,
+      alt: "rewards",
+      description: "",
+    },
+    {
+      image: SearchFacility,
+      alt: "search-facility",
+      description: "",
+    },
+    {
+      image: RateFacility,
+      alt: "rate-facility",
+      description: "",
+    },
+    {
+      image: StudentCalendar,
+      alt: "student-calendar",
+      description: "",
+    },
+    {
+      image: StudentAcc,
+      alt: "student-acc",
+      description: "",
+    },
+    {
+      image: EmployeeHome,
+      alt: "employee-home",
+      description: "",
+    },
+    {
       image: AvailableFacility,
       alt: "available-facility",
+      description: "",
+    },
+    {
+      image: RequestMaintenance,
+      alt: "request-maintenance",
       description: "",
     },
   ],
