@@ -2,6 +2,7 @@ import ReactBank from "@/assets/react_bank.png";
 import Ribrary from "@/assets/Ribrary.png";
 import Patient from "@/assets/patient.jpg";
 import QCUFMS from "@/assets/qcu-fms/preview.png";
+import NoImage from "@/assets/no_image_available.jpg";
 
 //USER SCREENSHOT
 import StudentHome from "@/assets/qcu-fms/user/student-home.jpg";
@@ -23,6 +24,28 @@ import StudentAcc from "@/assets/qcu-fms/user/student-acc.jpg";
 import EmployeeHome from "@/assets/qcu-fms/user/employee-home.jpg";
 import RequestMaintenance from "@/assets/qcu-fms/user/request-maintenance.jpg";
 
+//ADMIN SCREENSHOT
+import LoginAdmin from "@/assets/qcu-fms/admin/login.png";
+import Dashboard from "@/assets/qcu-fms/admin/dashboard.png";
+import UserManagement from "@/assets/qcu-fms/admin/user-management.png";
+import FacilityManagement from "@/assets/qcu-fms/admin/facility-management.png";
+import BuildingManagement from "@/assets/qcu-fms/admin/building-management.png";
+import EventManagement from "@/assets/qcu-fms/admin/event-management.png";
+import ReportManagement from "@/assets/qcu-fms/admin/report.png";
+import RequestManagement from "@/assets/qcu-fms/admin/request.png";
+import ServiceProvider from "@/assets/qcu-fms/admin/service-provider.png";
+import RewardDashboard from "@/assets/qcu-fms/admin/reward-dashboard.png";
+import RewardManagement from "@/assets/qcu-fms/admin/reward-management.png";
+import StudentPointsHistory from "@/assets/qcu-fms/admin/student-points-history.png";
+import RequestMaterial from "@/assets/qcu-fms/admin/request-material.png";
+import Profile1 from "@/assets/qcu-fms/admin/profile1.png";
+import Profile2 from "@/assets/qcu-fms/admin/profile2.png";
+import Analytics1 from "@/assets/qcu-fms/admin/analytics1.png";
+import Analytics2 from "@/assets/qcu-fms/admin/analytics2.png";
+import Analytics3 from "@/assets/qcu-fms/admin/analytics3.png";
+import Analytics4 from "@/assets/qcu-fms/admin/analytics4.png";
+import Analytics5 from "@/assets/qcu-fms/admin/analytics5.png";
+
 export const projects = [
   {
     name: "QCU-FMS",
@@ -38,19 +61,19 @@ export const projects = [
   {
     name: "HR Management System",
     info: "A system designed to streamline and automate various human resource processes",
-    projectImage: "",
+    projectImage: NoImage,
     technologies: ["Bootstrap", "Jquery", "PHP", "MySQL", "Javascript"],
     links: {
       github: "https://github.com/Jasonyecyec/HR_DEPT",
       url: "",
     },
-    view: "hr",
+    view: "",
   },
 
   {
     name: "OtakuFlix",
     info: "OtakuFlix is the perfect online platform for all anime lovers! Stream your favorite anime, read manga and manhwa, and enjoy an unforgettable otaku experience.",
-    projectImage: "",
+    projectImage: NoImage,
     technologies: [
       "Java",
       "React.js",
@@ -144,6 +167,11 @@ export const FMSProject = {
       description: "",
     },
     {
+      image: Scan,
+      alt: "scan",
+      description: "",
+    },
+    {
       image: Report,
       alt: "report",
       description: "",
@@ -199,5 +227,106 @@ export const FMSProject = {
       description: "",
     },
   ],
-  admin: [],
+  admin: [
+    {
+      image: LoginAdmin,
+      alt: "login",
+      description: "",
+    },
+    {
+      image: Dashboard,
+      alt: "dashboard",
+      description: "",
+    },
+    {
+      image: UserManagement,
+      alt: "user-management",
+      description: "",
+    },
+    {
+      image: BuildingManagement,
+      alt: "building-management",
+      description: "",
+    },
+    {
+      image: FacilityManagement,
+      alt: "facility-management",
+      description: "",
+    },
+    {
+      image: EventManagement,
+      alt: "event-management",
+      description: "",
+    },
+    {
+      image: ReportManagement,
+      alt: "report-management",
+      description: "",
+    },
+    {
+      image: RequestManagement,
+      alt: "request-management",
+      description: "",
+    },
+    {
+      image: ServiceProvider,
+      alt: "service-provider",
+      description: "",
+    },
+    {
+      image: RewardDashboard,
+      alt: "reward-dashboard",
+      description: "",
+    },
+    {
+      image: RewardManagement,
+      alt: "reward-management",
+      description: "",
+    },
+    {
+      image: StudentPointsHistory,
+      alt: "student-points-history",
+      description: "",
+    },
+    {
+      image: RequestMaterial,
+      alt: "request-material",
+      description: "",
+    },
+    {
+      image: Profile1,
+      alt: "profile1",
+      description: "",
+    },
+    {
+      image: Profile2,
+      alt: "profile2",
+      description: "",
+    },
+    {
+      image: Analytics1,
+      alt: "analytics1",
+      description: "",
+    },
+    {
+      image: Analytics2,
+      alt: "analytics2",
+      description: "",
+    },
+    {
+      image: Analytics3,
+      alt: "analytics3",
+      description: "",
+    },
+    {
+      image: Analytics4,
+      alt: "analytics4",
+      description: "",
+    },
+    {
+      image: Analytics5,
+      alt: "analytics5",
+      description: "",
+    },
+  ],
 };

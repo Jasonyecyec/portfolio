@@ -72,7 +72,8 @@ const Projects = () => {
                     <AiFillGithub />
                   </span>
                 </a>
-                {item.links.url !== "" ? (
+
+                {item.links.url !== "" && (
                   <a
                     href={item.links.url}
                     className={`flex items-center ${
@@ -84,8 +85,6 @@ const Projects = () => {
                       <BsArrowUpRight />
                     </span>
                   </a>
-                ) : (
-                  <p>Link not available</p>
                 )}
               </div>
 

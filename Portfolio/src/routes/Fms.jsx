@@ -66,27 +66,29 @@ const Fms = () => {
           </Tabs>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10 ">
-          {selected === "user" ? (
-            <>
-              {FMSProject.user.map((item, index) => (
-                <div className="shadow rounded-md" key={index}>
-                  <Image
-                    alt={item.alt}
-                    src={item.image}
-                    className="rounded-md"
-                  />
-                </div>
-              ))}
-            </>
-          ) : (
-            <>
-              <div className="h-[12rem]">t</div>
-              <div className="h-[12rem]">t</div>
-              <div className="h-[12rem]">t</div>
-            </>
-          )}
-        </div>
+        {selected === "user" && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10 ">
+            {FMSProject.user.map((item, index) => (
+              <div className="shadow rounded-md" key={index}>
+                <Image alt={item.alt} src={item.image} className="rounded-md" />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {selected === "admin" && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 ">
+            {FMSProject.admin.map((item, index) => (
+              <div className="shadow rounded-md " key={index}>
+                <Image
+                  alt={item.alt}
+                  src={item.image}
+                  className="rounded-md w-full "
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <button
