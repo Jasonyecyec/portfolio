@@ -12,7 +12,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 import MainSocials from "./MainSocials";
 import { Link } from "react-scroll";
-import Resume from "@/assets/jasonyecyec_resume_full_stack_no_number.pdf";
+import Resume from "@/assets/resume.pdf";
 import "../styles/main-info-style.css";
 
 const CTAButton = styled.button`
