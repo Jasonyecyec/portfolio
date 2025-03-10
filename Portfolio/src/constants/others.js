@@ -79,6 +79,18 @@ export const navigation = [
 
 export const experience = [
   {
+    company: "Radiowealth Finance Company",
+    position: "Software Developer",
+    from: "Jul 2024",
+    to: "Feb 2025",
+    details: [
+      "Developed and maintained scalable code for internal system, adding new modules and fixing bugs.",
+      "Revamped a loan application admin system using Laravel and Vue.",
+      "Configured and deployed web application on IIS Servers (UAT and Production environments).",
+      "ETL Developer – Create and optimized reports using SQL scripts, Excel templates and PL/SQL functions to support data integration, reporting and financial reports presentation.",
+    ],
+  },
+  {
     company: "MWeeb Information Technology Inc.",
     position: "frontend intern",
     from: "sep 2023",

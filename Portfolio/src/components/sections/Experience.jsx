@@ -42,14 +42,14 @@ const Experience = () => {
       lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
       lg:group-hover:drop-shadow-lg" */}
 
-      <div className="mt-8 w-full">
+      <div className="mt-8 w-full  space-y-5">
         {experience.map((item, index) => (
           <motion.div
             initial={{ x: 70, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
-            className={`block w-full ${containerStyle} md:flex md:space-x-3 group rounded-lg  p-5 ease-linear duration-100`}
+            className={`block w-full ${containerStyle} md:grid md:grid-cols-[150px_1fr] md:space-x-3 group rounded-lg  p-5 ease-linear duration-100 `}
             key={index}
           >
             <div className="w-full md:w-52">
@@ -57,6 +57,7 @@ const Experience = () => {
                 {item.from} - {item.to}
               </p>
             </div>
+
             <div className="space-y-1">
               <p className="text-lg font-semibold">
                 <span
@@ -74,13 +75,13 @@ const Experience = () => {
                   {item.position}
                 </span>
               </p>
-              <div className="text-sm space-y-2 w-full md:w-[90%] text-gray-500">
+              <div className="text-sm space-y-2 w-full md:w-[90%] text-gray-500 ">
                 {item.details.map((text, index) => {
                   if (text.includes("innque.com")) {
                     // Splitting the detail string to separate the URL
                     const [beforeUrl, afterUrl] = text.split("|");
                     return (
-                      <p key={index} className="flex space-x-2">
+                      <p key={index} className="flex items-center space-x-4">
                         <span>
                           <CaretRight
                             size={10}
@@ -104,7 +105,7 @@ const Experience = () => {
                     );
                   } else {
                     return (
-                      <p key={index} className="flex space-x-2 ">
+                      <p key={index} className="flex items-center space-x-4">
                         {" "}
                         <span>
                           <CaretRight
@@ -122,52 +123,6 @@ const Experience = () => {
             </div>
           </motion.div>
         ))}
-        {/* <div className="flex space-x-5 w-full justify-center rounded-lg hover:shadow-md border p-5 ease-in-out duration-150">
-          <div className="w-40">
-            <p className="uppercase font-semibold text-sm text-gray-500">
-              Sep 2023 - Dec 2023
-            </p>
-          </div>
-          <div className=" ">
-            <p className="text-lg font-semibold">
-              <span> MWeeb Information Technology Inc. </span>
-              <span> - </span>
-              <span className="text-gray-500 text-base">Frontend Intern</span>
-            </p>
-            <div className="text-sm space-y-2 w-[80%] text-gray-500">
-              <p className="flex">
-                <span>
-                  {" "}
-                  <CaretRight
-                    size={15}
-                    weight="fill"
-                    className={`${carretColor}`}
-                  />
-                </span>
-                <span>
-                  {" "}
-                  Enhanced a web chat application with advanced group chat
-                  management and user activity features using React{" "}
-                </span>
-              </p>
-              <p>
-                Developed a responsive landing page with React, Bootstrap, and
-                CSS |{" "}
-                <a
-                  href="https://innque.com/"
-                  target="_thapa"
-                  className="text-whitePrimay font-semibold"
-                >
-                  innque.com
-                </a>
-              </p>
-              <p>
-                Assisted in creating a web application for automated contract
-                document generation using React.
-              </p>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

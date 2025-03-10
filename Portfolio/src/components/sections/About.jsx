@@ -12,11 +12,15 @@ import GradPic from "@/assets/grad_pic.jpg";
 const About = () => {
   const { isActive } = useToggleMode();
 
-  // const carretColor = () => {
-  //   return isActive ? "text-darkPrimary " : "text-whitePrimay ";
-  // };
-
   const carretColor = isActive ? "text-darkPrimary " : "text-whitePrimay ";
+  const technologies = [
+    "ASP.NET",
+    "Laravel",
+    "Next.js",
+    "Typescript",
+    "AWS",
+    "Docker",
+  ];
 
   return (
     <section
@@ -51,13 +55,10 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            A dedicated full-stack developer from the Philippines with expertise
-            in <span className="font-semibold"> React JS </span> and{" "}
-            <span className="font-semibold"> Laravel </span> . I have a proven
-            ability to lead development projects and collaborate effectively
-            within a team. Eager to contribute and grow in a dynamic
-            environment, I am continuously learning and mastering new
-            technologies.
+            Experienced Software Developer with a proven ability to lead
+            development projects and collaborate effectively within a team.
+            Eager to contribute and grow in a dynamic environment, continuously
+            learning and mastering new technologies.
           </motion.p>
 
           <motion.p
@@ -66,7 +67,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            Here are a few technologies I’ve been learning with recently:
+            Here are a few technologies I’ve been working on recently:{" "}
           </motion.p>
 
           <motion.div
@@ -77,61 +78,19 @@ const About = () => {
             className=""
           >
             <ul className="w-full grid grid-cols-2 text-base font-semibold gap-2">
-              <li className="flex items-center space-x-2">
-                <span>
-                  {" "}
-                  <CaretRight
-                    size={15}
-                    weight="fill"
-                    className={`${carretColor}`}
-                  />{" "}
-                </span>{" "}
-                <span> Docker</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span>
-                  {" "}
-                  <CaretRight
-                    size={15}
-                    weight="fill"
-                    className={`${carretColor}`}
-                  />{" "}
-                </span>{" "}
-                <span> Next.js</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span>
-                  {" "}
-                  <CaretRight
-                    size={15}
-                    weight="fill"
-                    className={`${carretColor}`}
-                  />{" "}
-                </span>{" "}
-                <span> AWS</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span>
-                  {" "}
-                  <CaretRight
-                    size={15}
-                    weight="fill"
-                    className={`${carretColor}`}
-                  />{" "}
-                </span>{" "}
-                <span> React Native/Expo</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span>
-                  {" "}
-                  <CaretRight
-                    size={15}
-                    weight="fill"
-                    className={`${carretColor}`}
-                  />{" "}
-                </span>{" "}
-                <span> Typescript</span>
-              </li>
+              {technologies.map((item, index) => (
+                <li key={index} className="flex items-center space-x-2">
+                  <span>
+                    {" "}
+                    <CaretRight
+                      size={15}
+                      weight="fill"
+                      className={`${carretColor}`}
+                    />{" "}
+                  </span>{" "}
+                  <span> {item} </span>
+                </li>
+              ))}
             </ul>
           </motion.div>
         </motion.div>

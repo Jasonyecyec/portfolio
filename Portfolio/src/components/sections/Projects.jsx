@@ -88,13 +88,14 @@ const Projects = () => {
                 )}
               </div>
 
-              <p className="p-2 rounded  ">
+              <TechStacks list={item.technologies} isActive={isActive} />
+
+              <p className="rounded  ">
                 {item.info}
                 <span className="ml-1 font-semibold">
                   {item.name == "OtakuFlix" && "(Under development 🔧)"}
                 </span>
               </p>
-              <TechStacks list={item.technologies} isActive={isActive} />
             </motion.div>
 
             <motion.div

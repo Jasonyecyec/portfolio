@@ -141,7 +141,7 @@ const MainInfo = ({ viewObserver }) => {
               isActive
             )} text-xl smLaptop:text-2xl md:font-medium`}
           >
-            An aspiring <span className="font-bold"> Software Engineer</span>
+            <span className="font-bold"> Software Engineer</span>
           </motion.p>
 
           <motion.p
@@ -183,7 +183,7 @@ const MainInfo = ({ viewObserver }) => {
             </Link>
           </div>
 
-          <div
+          {/* <div
             className={`${bgColorClassPrimary()} bg-red-200 h-12 rounded w-44 text-center relative group`}
           >
             <a href={Resume} target="_thapa">
@@ -193,7 +193,7 @@ const MainInfo = ({ viewObserver }) => {
                 Resume{" "}
               </button>
             </a>
-          </div>
+          </div> */}
         </motion.div>
       </div>
 

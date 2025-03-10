@@ -3,6 +3,7 @@ import Ribrary from "@/assets/Ribrary.png";
 import Patient from "@/assets/patient.jpg";
 import QCUFMS from "@/assets/qcu-fms/preview.png";
 import NoImage from "@/assets/no_image_available.jpg";
+import RPG from "@/assets/RPG.png";
 
 //USER SCREENSHOT
 import StudentHome from "@/assets/qcu-fms/user/student-home.jpg";
@@ -47,6 +48,27 @@ import Analytics4 from "@/assets/qcu-fms/admin/analytics4.png";
 import Analytics5 from "@/assets/qcu-fms/admin/analytics5.png";
 
 export const projects = [
+  {
+    name: "Recruitmet Placement Global",
+    info: "A global recruitment management system for efficient hiring and candidate tracking.",
+    projectImage: RPG,
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "C#",
+      "Tailwind CSS",
+      "ASP.NET Core Web API",
+      "Open AI",
+      "MySQL",
+      "DigitalOcean",
+    ],
+    links: {
+      github: "https://github.com/Jasonyecyec/globalrecruitmentau",
+      url: "https://globalrecruitmentau.vercel.app/",
+    },
+    view: "",
+  },
   {
     name: "QCU-FMS",
     info: "A comprehensive system designed to simplify issue reporting, event requests, and service management for Quezon City University. ",
@@ -117,18 +139,6 @@ export const projects = [
     links: {
       github: "https://github.com/Jasonyecyec/patient_appointment",
       url: "",
-    },
-    view: "",
-  },
-
-  {
-    name: "React Bank Design",
-    info: "This project serves as a means for me to enhance and familiarize myself with React.js and Tailwind CSS. It involved following a tutorial provided by the JavaScript Mastery channel, which guided me through the entire development process.",
-    projectImage: ReactBank,
-    technologies: ["React.js", "Tailwind CSS", "Javascript"],
-    links: {
-      github: "https://github.com/Jasonyecyec/React-Bank-Design",
-      url: "https://react-bank-design.netlify.app/",
     },
     view: "",
   },
