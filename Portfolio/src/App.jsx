@@ -25,10 +25,7 @@ const SideLinks = styled(motion.div)`
   position: fixed;
   // background: red;
   bottom: 0px;
-  ${(props) =>
-    props.position === "left"
-      ? `left: ${props.align};`
-      : `right:  ${props.align};`};
+  ${(props) => (props.position === "left" ? `left: ${props.align};` : `right:  ${props.align};`)};
   display: none;
   flex-direction: column;
   height: 18rem;
@@ -67,10 +64,7 @@ const SideLinks = styled(motion.div)`
 
   button:hover {
     transform: translateY(-3px);
-    color: ${(props) =>
-      props.isActive
-        ? "#00D1C7"
-        : "#646AFF"}; /* Change icon color based on isActive prop */
+    color: ${(props) => (props.isActive ? "#00D1C7" : "#646AFF")}; /* Change icon color based on isActive prop */
   }
 
   @media (min-width: 1366px) {
@@ -82,10 +76,6 @@ function App() {
   const { isActive } = useToggleMode();
   const mainRef = useRef(null);
   const isInView = useInView(mainRef, { margin: "0px 0px 0px 0px" });
-
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
 
   return (
     <Routes>

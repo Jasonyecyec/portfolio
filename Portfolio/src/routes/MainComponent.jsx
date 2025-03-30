@@ -16,17 +16,12 @@ const MainComponent = () => {
   const mainRef = useRef(null);
   const isInView = useInView(mainRef, { margin: "0px 0px 0px 0px" });
 
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
-
   return (
     <main
       // ref={mainRef}
       className={`p-6 ${
         isActive ? "bg-dark" : "bg-white"
-      } ease-in-out	duration-300 flex flex-col items-center md:p-14 overflow-hidden h-full relative`}
-    >
+      } ease-in-out	duration-300 flex flex-col items-center md:p-14 overflow-hidden h-full relative`}>
       {" "}
       <MainInfo viewObserver={mainRef} />
       <About />
