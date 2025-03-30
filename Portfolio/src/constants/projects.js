@@ -49,7 +49,7 @@ import Analytics5 from "@/assets/qcu-fms/admin/analytics5.png";
 
 export const projects = [
   {
-    name: "Recruitmet Placement Global",
+    name: "Recruitment Global",
     info: "A global recruitment management system for efficient hiring and candidate tracking.",
     projectImage: RPG,
     technologies: [
@@ -65,7 +65,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/Jasonyecyec/globalrecruitmentau",
-      url: "https://globalrecruitmentau.vercel.app/",
+      url: "https://www.globalrecruitment.site/",
     },
     view: "",
   },
@@ -96,16 +96,7 @@ export const projects = [
     name: "OtakuFlix",
     info: "OtakuFlix is the perfect online platform for all anime lovers! Stream your favorite anime, read manga and manhwa, and enjoy an unforgettable otaku experience.",
     projectImage: NoImage,
-    technologies: [
-      "Java",
-      "React.js",
-      "Firebase",
-      "Tailwind CSS",
-      "Spring Boot",
-      "Gogoanime API",
-
-      "Javascript",
-    ],
+    technologies: ["Java", "React.js", "Firebase", "Tailwind CSS", "Spring Boot", "Gogoanime API", "Javascript"],
     links: {
       github: "https://github.com/Jasonyecyec/OtakuFlix",
       url: "https://otaku-flix.vercel.app/",
@@ -117,14 +108,7 @@ export const projects = [
     name: "Ribrary",
     info: "Ribray is a digital library and online social reading platform. It provides users with various copies of e-books, audiobooks, magazines, research documents, and podcasts. Users can also upload their own content and receive feedback from other users.",
     projectImage: Ribrary,
-    technologies: [
-      "Bootstrap",
-      "PHP",
-      "Jquery",
-      "MySQL",
-      "Javascript",
-      "Googlebooks API",
-    ],
+    technologies: ["Bootstrap", "PHP", "Jquery", "MySQL", "Javascript", "Googlebooks API"],
     links: {
       github: "https://github.com/Jasonyecyec/Ribrary",
       url: "",
