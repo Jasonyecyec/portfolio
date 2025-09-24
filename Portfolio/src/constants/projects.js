@@ -4,6 +4,7 @@ import Patient from "@/assets/patient.jpg";
 import QCUFMS from "@/assets/qcu-fms/preview.png";
 import NoImage from "@/assets/no_image_available.jpg";
 import RPG from "@/assets/RPG.png";
+import TGNC from "@/assets/tgnc.png";
 
 //USER SCREENSHOT
 import StudentHome from "@/assets/qcu-fms/user/student-home.jpg";
@@ -48,279 +49,305 @@ import Analytics4 from "@/assets/qcu-fms/admin/analytics4.png";
 import Analytics5 from "@/assets/qcu-fms/admin/analytics5.png";
 
 export const projects = [
-  {
-    name: "Recruitment Global",
-    info: "A global recruitment management system for efficient hiring and candidate tracking.",
-    projectImage: RPG,
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "C#",
-      "Tailwind CSS",
-      "ASP.NET Core Web API",
-      "Open AI",
-      "MySQL",
-      "DigitalOcean",
-    ],
-    links: {
-      github: "https://github.com/Jasonyecyec/globalrecruitmentau",
-      url: "https://www.globalrecruitment.site/",
-    },
-    view: "",
-  },
-  {
-    name: "QCU-FMS",
-    info: "A comprehensive system designed to simplify issue reporting, event requests, and service management for Quezon City University. ",
-    projectImage: QCUFMS,
-    technologies: ["React.js", "Laravel", "Tailwind CSS", "MySQL", "Open AI"],
-    links: {
-      github: "https://github.com/Jasonyecyec/IRRIS_mobile",
-      url: "https://irris-mobile.vercel.app/",
-    },
-    view: "/qcu-fms",
-  },
-  {
-    name: "HR Management System",
-    info: "A system designed to streamline and automate various human resource processes",
-    projectImage: NoImage,
-    technologies: ["Bootstrap", "Jquery", "PHP", "MySQL", "Javascript"],
-    links: {
-      github: "https://github.com/Jasonyecyec/HR_DEPT",
-      url: "",
-    },
-    view: "",
-  },
+	{
+		name: "The Good Neighbor Cards",
+		info: "A website for buying and selling cars and utility vehicles, featuring product listings, search, and user inquiries.",
+		projectImage: TGNC,
+		technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+		links: {
+			github: "#",
+			url: "https://tgnc.cross-unity.com/",
+		},
+		view: "",
+	},
+	{
+		name: "Recruitment Global",
+		info: "A global recruitment management system for efficient hiring and candidate tracking.",
+		projectImage: RPG,
+		technologies: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"C#",
+			"Tailwind CSS",
+			"ASP.NET Core Web API",
+			"Open AI",
+			"MySQL",
+			"DigitalOcean",
+		],
+		links: {
+			github: "https://github.com/Jasonyecyec/globalrecruitmentau",
+			url: "https://www.globalrecruitment.site/",
+		},
+		view: "",
+	},
+	{
+		name: "QCU-FMS",
+		info: "A comprehensive system designed to simplify issue reporting, event requests, and service management for Quezon City University. ",
+		projectImage: QCUFMS,
+		technologies: ["React.js", "Laravel", "Tailwind CSS", "MySQL", "Open AI"],
+		links: {
+			github: "https://github.com/Jasonyecyec/IRRIS_mobile",
+			url: "https://irris-mobile.vercel.app/",
+		},
+		view: "/qcu-fms",
+	},
+	{
+		name: "HR Management System",
+		info: "A system designed to streamline and automate various human resource processes",
+		projectImage: NoImage,
+		technologies: ["Bootstrap", "Jquery", "PHP", "MySQL", "Javascript"],
+		links: {
+			github: "https://github.com/Jasonyecyec/HR_DEPT",
+			url: "",
+		},
+		view: "",
+	},
 
-  {
-    name: "OtakuFlix",
-    info: "OtakuFlix is the perfect online platform for all anime lovers! Stream your favorite anime, read manga and manhwa, and enjoy an unforgettable otaku experience.",
-    projectImage: NoImage,
-    technologies: ["Java", "React.js", "Firebase", "Tailwind CSS", "Spring Boot", "Gogoanime API", "Javascript"],
-    links: {
-      github: "https://github.com/Jasonyecyec/OtakuFlix",
-      url: "https://otaku-flix.vercel.app/",
-    },
-    view: "",
-  },
+	{
+		name: "OtakuFlix",
+		info: "OtakuFlix is the perfect online platform for all anime lovers! Stream your favorite anime, read manga and manhwa, and enjoy an unforgettable otaku experience.",
+		projectImage: NoImage,
+		technologies: [
+			"Java",
+			"React.js",
+			"Firebase",
+			"Tailwind CSS",
+			"Spring Boot",
+			"Gogoanime API",
+			"Javascript",
+		],
+		links: {
+			github: "https://github.com/Jasonyecyec/OtakuFlix",
+			url: "https://otaku-flix.vercel.app/",
+		},
+		view: "",
+	},
 
-  {
-    name: "Ribrary",
-    info: "Ribray is a digital library and online social reading platform. It provides users with various copies of e-books, audiobooks, magazines, research documents, and podcasts. Users can also upload their own content and receive feedback from other users.",
-    projectImage: Ribrary,
-    technologies: ["Bootstrap", "PHP", "Jquery", "MySQL", "Javascript", "Googlebooks API"],
-    links: {
-      github: "https://github.com/Jasonyecyec/Ribrary",
-      url: "",
-    },
-    view: "",
-  },
-  {
-    name: "Patient Appointment Management System",
-    info: "This system  allow patients to easily make appointments online. It can manage patient records, track appointment history, and handle doctors' availability. Additionally, it notifies patients through email regarding their scheduled appointments.",
-    projectImage: Patient,
-    technologies: ["Bootstrap", "ASP.NET MVC", "MySQL", "C#"],
-    links: {
-      github: "https://github.com/Jasonyecyec/patient_appointment",
-      url: "",
-    },
-    view: "",
-  },
+	{
+		name: "Ribrary",
+		info: "Ribray is a digital library and online social reading platform. It provides users with various copies of e-books, audiobooks, magazines, research documents, and podcasts. Users can also upload their own content and receive feedback from other users.",
+		projectImage: Ribrary,
+		technologies: [
+			"Bootstrap",
+			"PHP",
+			"Jquery",
+			"MySQL",
+			"Javascript",
+			"Googlebooks API",
+		],
+		links: {
+			github: "https://github.com/Jasonyecyec/Ribrary",
+			url: "",
+		},
+		view: "",
+	},
+	{
+		name: "Patient Appointment Management System",
+		info: "This system  allow patients to easily make appointments online. It can manage patient records, track appointment history, and handle doctors' availability. Additionally, it notifies patients through email regarding their scheduled appointments.",
+		projectImage: Patient,
+		technologies: ["Bootstrap", "ASP.NET MVC", "MySQL", "C#"],
+		links: {
+			github: "https://github.com/Jasonyecyec/patient_appointment",
+			url: "",
+		},
+		view: "",
+	},
 ];
 
 export const FMSProject = {
-  user: [
-    {
-      image: Login,
-      alt: "login",
-      description: "",
-    },
-    {
-      image: ForgotPass,
-      alt: "forgot-pass",
-      description: "",
-    },
-    {
-      image: CreateAcc,
-      alt: "create-acc",
-      description: "",
-    },
-    {
-      image: Register,
-      alt: "register",
-      description: "",
-    },
-    {
-      image: OTP,
-      alt: "otp",
-      description: "",
-    },
-    {
-      image: StudentHome,
-      alt: "student-home",
-      description: "",
-    },
-    {
-      image: Scan,
-      alt: "scan",
-      description: "",
-    },
-    {
-      image: Report,
-      alt: "report",
-      description: "",
-    },
-    {
-      image: SubmitReport,
-      alt: "submit-report",
-      description: "",
-    },
-    {
-      image: StudentMore,
-      alt: "student-more",
-      description: "",
-    },
-    {
-      image: Rewards,
-      alt: "rewards",
-      description: "",
-    },
-    {
-      image: SearchFacility,
-      alt: "search-facility",
-      description: "",
-    },
-    {
-      image: RateFacility,
-      alt: "rate-facility",
-      description: "",
-    },
-    {
-      image: StudentCalendar,
-      alt: "student-calendar",
-      description: "",
-    },
-    {
-      image: StudentAcc,
-      alt: "student-acc",
-      description: "",
-    },
-    {
-      image: EmployeeHome,
-      alt: "employee-home",
-      description: "",
-    },
-    {
-      image: AvailableFacility,
-      alt: "available-facility",
-      description: "",
-    },
-    {
-      image: RequestMaintenance,
-      alt: "request-maintenance",
-      description: "",
-    },
-  ],
-  admin: [
-    {
-      image: LoginAdmin,
-      alt: "login",
-      description: "",
-    },
-    {
-      image: Dashboard,
-      alt: "dashboard",
-      description: "",
-    },
-    {
-      image: UserManagement,
-      alt: "user-management",
-      description: "",
-    },
-    {
-      image: BuildingManagement,
-      alt: "building-management",
-      description: "",
-    },
-    {
-      image: FacilityManagement,
-      alt: "facility-management",
-      description: "",
-    },
-    {
-      image: EventManagement,
-      alt: "event-management",
-      description: "",
-    },
-    {
-      image: ReportManagement,
-      alt: "report-management",
-      description: "",
-    },
-    {
-      image: RequestManagement,
-      alt: "request-management",
-      description: "",
-    },
-    {
-      image: ServiceProvider,
-      alt: "service-provider",
-      description: "",
-    },
-    {
-      image: RewardDashboard,
-      alt: "reward-dashboard",
-      description: "",
-    },
-    {
-      image: RewardManagement,
-      alt: "reward-management",
-      description: "",
-    },
-    {
-      image: StudentPointsHistory,
-      alt: "student-points-history",
-      description: "",
-    },
-    {
-      image: RequestMaterial,
-      alt: "request-material",
-      description: "",
-    },
-    {
-      image: Profile1,
-      alt: "profile1",
-      description: "",
-    },
-    {
-      image: Profile2,
-      alt: "profile2",
-      description: "",
-    },
-    {
-      image: Analytics1,
-      alt: "analytics1",
-      description: "",
-    },
-    {
-      image: Analytics2,
-      alt: "analytics2",
-      description: "",
-    },
-    {
-      image: Analytics3,
-      alt: "analytics3",
-      description: "",
-    },
-    {
-      image: Analytics4,
-      alt: "analytics4",
-      description: "",
-    },
-    {
-      image: Analytics5,
-      alt: "analytics5",
-      description: "",
-    },
-  ],
+	user: [
+		{
+			image: Login,
+			alt: "login",
+			description: "",
+		},
+		{
+			image: ForgotPass,
+			alt: "forgot-pass",
+			description: "",
+		},
+		{
+			image: CreateAcc,
+			alt: "create-acc",
+			description: "",
+		},
+		{
+			image: Register,
+			alt: "register",
+			description: "",
+		},
+		{
+			image: OTP,
+			alt: "otp",
+			description: "",
+		},
+		{
+			image: StudentHome,
+			alt: "student-home",
+			description: "",
+		},
+		{
+			image: Scan,
+			alt: "scan",
+			description: "",
+		},
+		{
+			image: Report,
+			alt: "report",
+			description: "",
+		},
+		{
+			image: SubmitReport,
+			alt: "submit-report",
+			description: "",
+		},
+		{
+			image: StudentMore,
+			alt: "student-more",
+			description: "",
+		},
+		{
+			image: Rewards,
+			alt: "rewards",
+			description: "",
+		},
+		{
+			image: SearchFacility,
+			alt: "search-facility",
+			description: "",
+		},
+		{
+			image: RateFacility,
+			alt: "rate-facility",
+			description: "",
+		},
+		{
+			image: StudentCalendar,
+			alt: "student-calendar",
+			description: "",
+		},
+		{
+			image: StudentAcc,
+			alt: "student-acc",
+			description: "",
+		},
+		{
+			image: EmployeeHome,
+			alt: "employee-home",
+			description: "",
+		},
+		{
+			image: AvailableFacility,
+			alt: "available-facility",
+			description: "",
+		},
+		{
+			image: RequestMaintenance,
+			alt: "request-maintenance",
+			description: "",
+		},
+	],
+	admin: [
+		{
+			image: LoginAdmin,
+			alt: "login",
+			description: "",
+		},
+		{
+			image: Dashboard,
+			alt: "dashboard",
+			description: "",
+		},
+		{
+			image: UserManagement,
+			alt: "user-management",
+			description: "",
+		},
+		{
+			image: BuildingManagement,
+			alt: "building-management",
+			description: "",
+		},
+		{
+			image: FacilityManagement,
+			alt: "facility-management",
+			description: "",
+		},
+		{
+			image: EventManagement,
+			alt: "event-management",
+			description: "",
+		},
+		{
+			image: ReportManagement,
+			alt: "report-management",
+			description: "",
+		},
+		{
+			image: RequestManagement,
+			alt: "request-management",
+			description: "",
+		},
+		{
+			image: ServiceProvider,
+			alt: "service-provider",
+			description: "",
+		},
+		{
+			image: RewardDashboard,
+			alt: "reward-dashboard",
+			description: "",
+		},
+		{
+			image: RewardManagement,
+			alt: "reward-management",
+			description: "",
+		},
+		{
+			image: StudentPointsHistory,
+			alt: "student-points-history",
+			description: "",
+		},
+		{
+			image: RequestMaterial,
+			alt: "request-material",
+			description: "",
+		},
+		{
+			image: Profile1,
+			alt: "profile1",
+			description: "",
+		},
+		{
+			image: Profile2,
+			alt: "profile2",
+			description: "",
+		},
+		{
+			image: Analytics1,
+			alt: "analytics1",
+			description: "",
+		},
+		{
+			image: Analytics2,
+			alt: "analytics2",
+			description: "",
+		},
+		{
+			image: Analytics3,
+			alt: "analytics3",
+			description: "",
+		},
+		{
+			image: Analytics4,
+			alt: "analytics4",
+			description: "",
+		},
+		{
+			image: Analytics5,
+			alt: "analytics5",
+			description: "",
+		},
+	],
 };
